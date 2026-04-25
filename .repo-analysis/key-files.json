@@ -1,0 +1,3707 @@
+{
+  "files": [
+    {
+      "bytes": 2470,
+      "language": "Other",
+      "path": ".gitignore",
+      "sha256": "2feaac63abb490e0"
+    },
+    {
+      "bytes": 2515,
+      "language": "Markdown",
+      "path": "AGENTS.md",
+      "sha256": "222aea9a77d04983"
+    },
+    {
+      "bytes": 9,
+      "language": "Markdown",
+      "path": "CLAUDE.md",
+      "sha256": "a54ff182c7e8acf5"
+    },
+    {
+      "bytes": 3028,
+      "language": "Other",
+      "path": "Dockerfile",
+      "sha256": "122463e5721c6ed2"
+    },
+    {
+      "bytes": 4005,
+      "language": "Other",
+      "path": "Gemfile",
+      "sha256": "03624ece4f34ce4c"
+    },
+    {
+      "bytes": 702,
+      "language": "Markdown",
+      "path": "README.md",
+      "sha256": "06016966fbcc5c98"
+    },
+    {
+      "bytes": 2753,
+      "language": "Markdown",
+      "path": "app/graphql/loaders/README.md",
+      "sha256": "2493b7baa1275ae7"
+    },
+    {
+      "bytes": 9,
+      "language": "Markdown",
+      "path": "config/feature_flags/AGENTS.md",
+      "sha256": "6ebdb617a8104a77"
+    },
+    {
+      "bytes": 3291,
+      "language": "Markdown",
+      "path": "config/feature_flags/CLAUDE.md",
+      "sha256": "0dce12d8d9743d18"
+    },
+    {
+      "bytes": 1029,
+      "language": "Markdown",
+      "path": "config/teams/README.md",
+      "sha256": "eef10d4ba86539f0"
+    },
+    {
+      "bytes": 4875,
+      "language": "Markdown",
+      "path": "doc/api/README.md",
+      "sha256": "891758aeda56c672"
+    },
+    {
+      "bytes": 2026,
+      "language": "Markdown",
+      "path": "doc/docker/README.md",
+      "sha256": "af5ea387f039dada"
+    },
+    {
+      "bytes": 431,
+      "language": "Other",
+      "path": "doc/examples/README",
+      "sha256": "2cd5a2cd410d891e"
+    },
+    {
+      "bytes": 303,
+      "language": "Other",
+      "path": "doc/images/README",
+      "sha256": "c05eb0e3ccb758f7"
+    },
+    {
+      "bytes": 439,
+      "language": "YAML",
+      "path": "docker-compose.yml",
+      "sha256": "2980f68ea2957cd2"
+    },
+    {
+      "bytes": 1574,
+      "language": "Other",
+      "path": "docker-compose/karma/Dockerfile",
+      "sha256": "4a0c9c09a2cb1e7c"
+    },
+    {
+      "bytes": 732,
+      "language": "Other",
+      "path": "docker-compose/postgres/Dockerfile",
+      "sha256": "b039ed46f78eb4ef"
+    },
+    {
+      "bytes": 64,
+      "language": "Other",
+      "path": "docker-compose/vault/Dockerfile",
+      "sha256": "a222487e240e582c"
+    },
+    {
+      "bytes": 1467,
+      "language": "Markdown",
+      "path": "gems/README.md",
+      "sha256": "f57e0463f58e97b5"
+    },
+    {
+      "bytes": 182,
+      "language": "Other",
+      "path": "gems/activesupport-suspend_callbacks/Gemfile",
+      "sha256": "9888c3670f171502"
+    },
+    {
+      "bytes": 1629,
+      "language": "Markdown",
+      "path": "gems/activesupport-suspend_callbacks/README.md",
+      "sha256": "9855070a7cbccb27"
+    },
+    {
+      "bytes": 146,
+      "language": "Other",
+      "path": "gems/acts_as_list/Gemfile",
+      "sha256": "c08d4bd349012321"
+    },
+    {
+      "bytes": 610,
+      "language": "Other",
+      "path": "gems/acts_as_list/README",
+      "sha256": "8ea1a3331a626459"
+    },
+    {
+      "bytes": 170,
+      "language": "Other",
+      "path": "gems/adheres_to_policy/Gemfile",
+      "sha256": "1ee602d8ff064a73"
+    },
+    {
+      "bytes": 915,
+      "language": "Markdown",
+      "path": "gems/adheres_to_policy/README.md",
+      "sha256": "88f32ecc072f2862"
+    },
+    {
+      "bytes": 8193,
+      "language": "Other",
+      "path": "gems/attachment_fu/README",
+      "sha256": "492807c72738686e"
+    },
+    {
+      "bytes": 106,
+      "language": "Other",
+      "path": "gems/autoextend/Gemfile",
+      "sha256": "da1b9c17f912de67"
+    },
+    {
+      "bytes": 270,
+      "language": "Other",
+      "path": "gems/bookmarked_collection/Gemfile",
+      "sha256": "c1f6eaf439ed73d0"
+    },
+    {
+      "bytes": 356,
+      "language": "Other",
+      "path": "gems/broadcast_policy/Gemfile",
+      "sha256": "15b9790cca239e10"
+    },
+    {
+      "bytes": 1599,
+      "language": "Markdown",
+      "path": "gems/broadcast_policy/README.md",
+      "sha256": "65858bdda4af50b5"
+    },
+    {
+      "bytes": 158,
+      "language": "Other",
+      "path": "gems/canvas_breach_mitigation/Gemfile",
+      "sha256": "284de5358b3ef516"
+    },
+    {
+      "bytes": 1278,
+      "language": "Markdown",
+      "path": "gems/canvas_breach_mitigation/README.md",
+      "sha256": "47c1d68047a999d5"
+    },
+    {
+      "bytes": 190,
+      "language": "Other",
+      "path": "gems/canvas_cache/Gemfile",
+      "sha256": "4e40bb6df5721c03"
+    },
+    {
+      "bytes": 2536,
+      "language": "Markdown",
+      "path": "gems/canvas_cache/README.md",
+      "sha256": "5b90d119fb508b4b"
+    },
+    {
+      "bytes": 82,
+      "language": "Other",
+      "path": "gems/canvas_color/Gemfile",
+      "sha256": "98e5d474db04f1e3"
+    },
+    {
+      "bytes": 168,
+      "language": "Other",
+      "path": "gems/canvas_crummy/Gemfile",
+      "sha256": "9a5c30f8d16b50a4"
+    },
+    {
+      "bytes": 3025,
+      "language": "Markdown",
+      "path": "gems/canvas_crummy/README.md",
+      "sha256": "5c63cd361a1330b4"
+    },
+    {
+      "bytes": 192,
+      "language": "Other",
+      "path": "gems/canvas_dynamodb/Gemfile",
+      "sha256": "3e2ba060418b55f7"
+    },
+    {
+      "bytes": 517,
+      "language": "Markdown",
+      "path": "gems/canvas_dynamodb/README.md",
+      "sha256": "47b9dc37c0d125a1"
+    },
+    {
+      "bytes": 133,
+      "language": "Other",
+      "path": "gems/canvas_errors/Gemfile",
+      "sha256": "66650fbb1432b52f"
+    },
+    {
+      "bytes": 6499,
+      "language": "Markdown",
+      "path": "gems/canvas_errors/README.md",
+      "sha256": "73300f40c6aeb02c"
+    },
+    {
+      "bytes": 68,
+      "language": "Markdown",
+      "path": "gems/canvas_errors/config/README.md",
+      "sha256": "61c014537dd50ff6"
+    },
+    {
+      "bytes": 142,
+      "language": "Other",
+      "path": "gems/canvas_ext/Gemfile",
+      "sha256": "3b0c8e06d7c3cbee"
+    },
+    {
+      "bytes": 349,
+      "language": "Other",
+      "path": "gems/canvas_http/Gemfile",
+      "sha256": "d0004e2be0843822"
+    },
+    {
+      "bytes": 445,
+      "language": "Other",
+      "path": "gems/canvas_kaltura/Gemfile",
+      "sha256": "465618d38584daef"
+    },
+    {
+      "bytes": 132,
+      "language": "Other",
+      "path": "gems/canvas_mimetype_fu/Gemfile",
+      "sha256": "02fdd5c3221200cb"
+    },
+    {
+      "bytes": 666,
+      "language": "Markdown",
+      "path": "gems/canvas_mimetype_fu/README.md",
+      "sha256": "90ddd65337009bd0"
+    },
+    {
+      "bytes": 389,
+      "language": "Other",
+      "path": "gems/canvas_panda_pub/Gemfile",
+      "sha256": "087f4bee035ea4e0"
+    },
+    {
+      "bytes": 159,
+      "language": "Other",
+      "path": "gems/canvas_partman/Gemfile",
+      "sha256": "cf328cf75b96e11a"
+    },
+    {
+      "bytes": 7540,
+      "language": "Markdown",
+      "path": "gems/canvas_partman/README.md",
+      "sha256": "b9c5d32ed1e0f32a"
+    },
+    {
+      "bytes": 291,
+      "language": "Other",
+      "path": "gems/canvas_quiz_statistics/Gemfile",
+      "sha256": "9b6f8f3a07c4b836"
+    },
+    {
+      "bytes": 1155,
+      "language": "Markdown",
+      "path": "gems/canvas_quiz_statistics/README.md",
+      "sha256": "c641785b09873d61"
+    },
+    {
+      "bytes": 144,
+      "language": "Other",
+      "path": "gems/canvas_sanitize/Gemfile",
+      "sha256": "4f3c972f01adfc8b"
+    },
+    {
+      "bytes": 1796,
+      "language": "Markdown",
+      "path": "gems/canvas_sanitize/README.md",
+      "sha256": "cd2b9bb1104d5e7d"
+    },
+    {
+      "bytes": 253,
+      "language": "Other",
+      "path": "gems/canvas_security/Gemfile",
+      "sha256": "804528d94ce6fafe"
+    },
+    {
+      "bytes": 3509,
+      "language": "Markdown",
+      "path": "gems/canvas_security/README.md",
+      "sha256": "2d53d5c6ab3a6acd"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "gems/canvas_slug/Gemfile",
+      "sha256": "a340eb0203230360"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "gems/canvas_sort/Gemfile",
+      "sha256": "a340eb0203230360"
+    },
+    {
+      "bytes": 27,
+      "language": "Other",
+      "path": "gems/canvas_stringex/.gitignore",
+      "sha256": "4e2c5e586045c056"
+    },
+    {
+      "bytes": 203,
+      "language": "Other",
+      "path": "gems/canvas_stringex/Gemfile",
+      "sha256": "e3fbb9885b6bc7d8"
+    },
+    {
+      "bytes": 4943,
+      "language": "Other",
+      "path": "gems/canvas_stringex/README.rdoc",
+      "sha256": "ae6282c3c4f113df"
+    },
+    {
+      "bytes": 132,
+      "language": "Other",
+      "path": "gems/canvas_text_helper/Gemfile",
+      "sha256": "02fdd5c3221200cb"
+    },
+    {
+      "bytes": 157,
+      "language": "Other",
+      "path": "gems/canvas_time/Gemfile",
+      "sha256": "1ca1bd0944f0c89d"
+    },
+    {
+      "bytes": 198,
+      "language": "Other",
+      "path": "gems/canvas_unzip/Gemfile",
+      "sha256": "41cf9253bbf97ff4"
+    },
+    {
+      "bytes": 133,
+      "language": "Other",
+      "path": "gems/config_file/Gemfile",
+      "sha256": "66650fbb1432b52f"
+    },
+    {
+      "bytes": 1973,
+      "language": "Markdown",
+      "path": "gems/config_file/README.md",
+      "sha256": "e6714df5c8563056"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "gems/csv_diff/Gemfile",
+      "sha256": "a340eb0203230360"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "gems/diigo/Gemfile",
+      "sha256": "a340eb0203230360"
+    },
+    {
+      "bytes": 124,
+      "language": "Other",
+      "path": "gems/dr_diff/Gemfile",
+      "sha256": "6b5ee5f8eda3e026"
+    },
+    {
+      "bytes": 1800,
+      "language": "Markdown",
+      "path": "gems/dr_diff/README.md",
+      "sha256": "fd498a802ea895cf"
+    },
+    {
+      "bytes": 31,
+      "language": "Other",
+      "path": "gems/dynamic_settings/.gitignore",
+      "sha256": "238bc1401b60eae3"
+    },
+    {
+      "bytes": 190,
+      "language": "Other",
+      "path": "gems/dynamic_settings/Gemfile",
+      "sha256": "4e40bb6df5721c03"
+    },
+    {
+      "bytes": 2726,
+      "language": "Markdown",
+      "path": "gems/dynamic_settings/README.md",
+      "sha256": "f9c9349f102a8e67"
+    },
+    {
+      "bytes": 378,
+      "language": "Other",
+      "path": "gems/event_stream/Gemfile",
+      "sha256": "f314690cb4a48ce7"
+    },
+    {
+      "bytes": 145,
+      "language": "Other",
+      "path": "gems/google_drive/Gemfile",
+      "sha256": "66519d7bed9de2de"
+    },
+    {
+      "bytes": 278,
+      "language": "Other",
+      "path": "gems/html_text_helper/Gemfile",
+      "sha256": "23bb823232bc5061"
+    },
+    {
+      "bytes": 143,
+      "language": "Other",
+      "path": "gems/i18n_extraction/Gemfile",
+      "sha256": "49e304aa4d9dd894"
+    },
+    {
+      "bytes": 294,
+      "language": "Other",
+      "path": "gems/i18n_tasks/Gemfile",
+      "sha256": "4c567198c4c57b44"
+    },
+    {
+      "bytes": 592,
+      "language": "Other",
+      "path": "gems/incoming_mail_processor/Gemfile",
+      "sha256": "234cc69299287a15"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "gems/json_token/Gemfile",
+      "sha256": "a340eb0203230360"
+    },
+    {
+      "bytes": 174,
+      "language": "Other",
+      "path": "gems/legacy_multipart/Gemfile",
+      "sha256": "547a709b6e335cb0"
+    },
+    {
+      "bytes": 170,
+      "language": "Other",
+      "path": "gems/live_events/Gemfile",
+      "sha256": "7bcdbe4361a5adb5"
+    },
+    {
+      "bytes": 113,
+      "language": "Other",
+      "path": "gems/lti-advantage/.gitignore",
+      "sha256": "1e152031a5613981"
+    },
+    {
+      "bytes": 229,
+      "language": "Other",
+      "path": "gems/lti-advantage/Gemfile",
+      "sha256": "282c3654442584b8"
+    },
+    {
+      "bytes": 1349,
+      "language": "Markdown",
+      "path": "gems/lti-advantage/README.md",
+      "sha256": "f81f5992d79594e1"
+    },
+    {
+      "bytes": 170,
+      "language": "Other",
+      "path": "gems/lti_outbound/Gemfile",
+      "sha256": "1ee602d8ff064a73"
+    },
+    {
+      "bytes": 572,
+      "language": "Markdown",
+      "path": "gems/lti_outbound/README.md",
+      "sha256": "1a57b9fd727d7432"
+    },
+    {
+      "bytes": 119,
+      "language": "Other",
+      "path": "gems/paginated_collection/Gemfile",
+      "sha256": "f7f22beb34ababb1"
+    },
+    {
+      "bytes": 504,
+      "language": "Other",
+      "path": "gems/plugins/qti_exporter/Readme.txt",
+      "sha256": "e7304b2fef47391d"
+    },
+    {
+      "bytes": 4007,
+      "language": "Other",
+      "path": "gems/plugins/simply_versioned/README",
+      "sha256": "5e98c09f010dce0e"
+    },
+    {
+      "bytes": 255,
+      "language": "Other",
+      "path": "gems/request_context/Gemfile",
+      "sha256": "28ac2433c079f19b"
+    },
+    {
+      "bytes": 1521,
+      "language": "Markdown",
+      "path": "gems/request_context/README.md",
+      "sha256": "fe681be7f3b9f2c1"
+    },
+    {
+      "bytes": 104,
+      "language": "Other",
+      "path": "gems/rubocop-canvas/.gitignore",
+      "sha256": "1a53328738130f48"
+    },
+    {
+      "bytes": 155,
+      "language": "Other",
+      "path": "gems/rubocop-canvas/Gemfile",
+      "sha256": "5ededf06159c5bc4"
+    },
+    {
+      "bytes": 2045,
+      "language": "Markdown",
+      "path": "gems/rubocop-canvas/README.md",
+      "sha256": "36f25dda81874059"
+    },
+    {
+      "bytes": 94,
+      "language": "Other",
+      "path": "gems/stringify_ids/Gemfile",
+      "sha256": "56b117db446254d3"
+    },
+    {
+      "bytes": 141,
+      "language": "Other",
+      "path": "gems/tatl_tael/Gemfile",
+      "sha256": "ecfd5d3c9f8bf4f5"
+    },
+    {
+      "bytes": 309,
+      "language": "Markdown",
+      "path": "gems/tatl_tael/README.md",
+      "sha256": "25b563024353adee"
+    },
+    {
+      "bytes": 167,
+      "language": "Other",
+      "path": "gems/turnitin_api/Gemfile",
+      "sha256": "9b2236fb1b05f62d"
+    },
+    {
+      "bytes": 1339,
+      "language": "Markdown",
+      "path": "gems/turnitin_api/README.md",
+      "sha256": "f807c1463e3d2d97"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "gems/utf8_cleaner/Gemfile",
+      "sha256": "a340eb0203230360"
+    },
+    {
+      "bytes": 158,
+      "language": "Other",
+      "path": "gems/workflow/Gemfile",
+      "sha256": "c6867777e46187fe"
+    },
+    {
+      "bytes": 19234,
+      "language": "Other",
+      "path": "package.json",
+      "sha256": "9d269acb3f9cb76d"
+    },
+    {
+      "bytes": 509,
+      "language": "Other",
+      "path": "packages/babel-preset-pretranslated-translations-package-format-message/package.json",
+      "sha256": "20c88c6a9914bf20"
+    },
+    {
+      "bytes": 120,
+      "language": "Other",
+      "path": "packages/bootstrap-dropdown/package.json",
+      "sha256": "f676ef8aeec88e38"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "packages/bootstrap-select/package.json",
+      "sha256": "54bc24acc9b4fbf5"
+    },
+    {
+      "bytes": 1566,
+      "language": "Markdown",
+      "path": "packages/browserslist-config-canvas-lms/README.md",
+      "sha256": "35a156865677b8d5"
+    },
+    {
+      "bytes": 673,
+      "language": "Other",
+      "path": "packages/browserslist-config-canvas-lms/package.json",
+      "sha256": "1a856da42dbcb52e"
+    },
+    {
+      "bytes": 3128,
+      "language": "Other",
+      "path": "packages/canvas-media/package.json",
+      "sha256": "ec7a96ca862cd6a2"
+    },
+    {
+      "bytes": 577,
+      "language": "Other",
+      "path": "packages/canvas-media/tsconfig.json",
+      "sha256": "7725cf7765a67cc3"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "packages/canvas-rce/.gitignore",
+      "sha256": "4ce4b98c5f56aba2"
+    },
+    {
+      "bytes": 465,
+      "language": "Other",
+      "path": "packages/canvas-rce/Dockerfile",
+      "sha256": "929cd4fb8cfff7c2"
+    },
+    {
+      "bytes": 2586,
+      "language": "Markdown",
+      "path": "packages/canvas-rce/README.md",
+      "sha256": "2a1e07d34754e891"
+    },
+    {
+      "bytes": 63,
+      "language": "YAML",
+      "path": "packages/canvas-rce/docker-compose.yml",
+      "sha256": "5ece11faf024e147"
+    },
+    {
+      "bytes": 7767,
+      "language": "Other",
+      "path": "packages/canvas-rce/package.json",
+      "sha256": "790872ef4ac0b28f"
+    },
+    {
+      "bytes": 433,
+      "language": "Markdown",
+      "path": "packages/canvas-rce/src/canvasFileBrowser/README.md",
+      "sha256": "e269fea556bd90a6"
+    },
+    {
+      "bytes": 253,
+      "language": "Markdown",
+      "path": "packages/canvas-rce/src/common/README.md",
+      "sha256": "bcc6b56625a758ff"
+    },
+    {
+      "bytes": 280,
+      "language": "Markdown",
+      "path": "packages/canvas-rce/src/rce/plugins/shared/do-fetch-api-effect/README.md",
+      "sha256": "afa652609c950c97"
+    },
+    {
+      "bytes": 782,
+      "language": "Other",
+      "path": "packages/canvas-rce/tsconfig.json",
+      "sha256": "379d5d0bfbbe0be0"
+    },
+    {
+      "bytes": 88,
+      "language": "Other",
+      "path": "packages/date-js-alias/package.json",
+      "sha256": "739289b130cca1dc"
+    },
+    {
+      "bytes": 121,
+      "language": "Other",
+      "path": "packages/date-js/package.json",
+      "sha256": "2f85f11242ccd6f1"
+    },
+    {
+      "bytes": 148,
+      "language": "Other",
+      "path": "packages/defer-promise/package.json",
+      "sha256": "c081595808bf7498"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "packages/deparam/package.json",
+      "sha256": "944062a41def6e51"
+    },
+    {
+      "bytes": 138,
+      "language": "Other",
+      "path": "packages/filter-console-messages/package.json",
+      "sha256": "be7916e4b62f4829"
+    },
+    {
+      "bytes": 131,
+      "language": "Other",
+      "path": "packages/force-screenreader-to-reparse/package.json",
+      "sha256": "50ec839e7635dbb4"
+    },
+    {
+      "bytes": 202,
+      "language": "Other",
+      "path": "packages/format-message-estree-util/package.json",
+      "sha256": "51b1d009389ec4be"
+    },
+    {
+      "bytes": 13,
+      "language": "Other",
+      "path": "packages/grading-utils/.gitignore",
+      "sha256": "16d30e4462189fb1"
+    },
+    {
+      "bytes": 582,
+      "language": "Markdown",
+      "path": "packages/grading-utils/README.md",
+      "sha256": "d20903004b638a0c"
+    },
+    {
+      "bytes": 380,
+      "language": "Other",
+      "path": "packages/grading-utils/package.json",
+      "sha256": "4936845471408a8e"
+    },
+    {
+      "bytes": 113,
+      "language": "Other",
+      "path": "packages/html-escape-old/package.json",
+      "sha256": "ea4368a3fad83caa"
+    },
+    {
+      "bytes": 146,
+      "language": "Other",
+      "path": "packages/html-escape/package.json",
+      "sha256": "285e69b0fca5ea3c"
+    },
+    {
+      "bytes": 126,
+      "language": "Other",
+      "path": "packages/jquery-fancy-placeholder/package.json",
+      "sha256": "e9db88de5e8ce7d5"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "packages/jquery-kyle-menu/package.json",
+      "sha256": "641b2c003b74097a"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "packages/jquery-popover/package.json",
+      "sha256": "b0a3ac0b376829e0"
+    },
+    {
+      "bytes": 113,
+      "language": "Other",
+      "path": "packages/jquery-qtip/package.json",
+      "sha256": "965c1da092e95c10"
+    },
+    {
+      "bytes": 125,
+      "language": "Other",
+      "path": "packages/jquery-scroll-into-view/package.json",
+      "sha256": "6bea3c100a82003a"
+    },
+    {
+      "bytes": 126,
+      "language": "Other",
+      "path": "packages/jquery-scroll-to-visible/package.json",
+      "sha256": "5eced45c03e158b3"
+    },
+    {
+      "bytes": 119,
+      "language": "Other",
+      "path": "packages/jquery-selectmenu/package.json",
+      "sha256": "efa1ceb143ce743b"
+    },
+    {
+      "bytes": 159,
+      "language": "Other",
+      "path": "packages/jquery-tinypubsub/package.json",
+      "sha256": "392cac510f16010c"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "packages/jquery/package.json",
+      "sha256": "b0dd0325d84b41c8"
+    },
+    {
+      "bytes": 126,
+      "language": "Other",
+      "path": "packages/jqueryui/package.json",
+      "sha256": "8a7ede2f16f4bc67"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "packages/k5uploader/.gitignore",
+      "sha256": "307dd21503c6efbd"
+    },
+    {
+      "bytes": 2186,
+      "language": "Markdown",
+      "path": "packages/k5uploader/README.md",
+      "sha256": "d1d883bc4fbcb5e3"
+    },
+    {
+      "bytes": 727,
+      "language": "Other",
+      "path": "packages/k5uploader/package.json",
+      "sha256": "202671b360fadf43"
+    },
+    {
+      "bytes": 427,
+      "language": "Other",
+      "path": "packages/k5uploader/tsconfig.json",
+      "sha256": "4b6189934a7bac2a"
+    },
+    {
+      "bytes": 97,
+      "language": "Other",
+      "path": "packages/link-header-parsing/package.json",
+      "sha256": "600fd13ceb95df3c"
+    },
+    {
+      "bytes": 103,
+      "language": "Other",
+      "path": "packages/moment-utils/package.json",
+      "sha256": "51c6a65bea92cb8b"
+    },
+    {
+      "bytes": 156,
+      "language": "Other",
+      "path": "packages/obj-unflatten/package.json",
+      "sha256": "867477a6092c5799"
+    },
+    {
+      "bytes": 156,
+      "language": "Other",
+      "path": "packages/query-string-encoding/package.json",
+      "sha256": "7ba5a1c1f9d9855b"
+    },
+    {
+      "bytes": 124,
+      "language": "Other",
+      "path": "packages/react-dnd-test-backend/package.json",
+      "sha256": "095182b17918c753"
+    },
+    {
+      "bytes": 578,
+      "language": "Other",
+      "path": "packages/ready/package.json",
+      "sha256": "4dce5d0671dd1392"
+    },
+    {
+      "bytes": 228,
+      "language": "Other",
+      "path": "packages/sanitize-html-with-tinymce/package.json",
+      "sha256": "31b7643650b5a24c"
+    },
+    {
+      "bytes": 130,
+      "language": "Other",
+      "path": "packages/slickgrid/package.json",
+      "sha256": "305d24a32300b091"
+    },
+    {
+      "bytes": 6,
+      "language": "Other",
+      "path": "packages/translations/.gitignore",
+      "sha256": "52b5e50e23bf199e"
+    },
+    {
+      "bytes": 478,
+      "language": "Other",
+      "path": "packages/translations/package.json",
+      "sha256": "35642eac2aea7d9e"
+    },
+    {
+      "bytes": 358,
+      "language": "Markdown",
+      "path": "spec/support/custom_matchers/README.md",
+      "sha256": "ecc5d81e37f593b9"
+    },
+    {
+      "bytes": 1294,
+      "language": "Other",
+      "path": "tsconfig.json",
+      "sha256": "7da8066a27f809ed"
+    },
+    {
+      "bytes": 132,
+      "language": "Other",
+      "path": "ui-build/package.json",
+      "sha256": "a1ff8c6edd5e75d0"
+    },
+    {
+      "bytes": 7199,
+      "language": "Markdown",
+      "path": "ui/AGENTS.md",
+      "sha256": "df9a1cf4748e8e0b"
+    },
+    {
+      "bytes": 9,
+      "language": "Markdown",
+      "path": "ui/CLAUDE.md",
+      "sha256": "a54ff182c7e8acf5"
+    },
+    {
+      "bytes": 339,
+      "language": "Other",
+      "path": "ui/engine/package.json",
+      "sha256": "cc14f58d24a44f92"
+    },
+    {
+      "bytes": 113,
+      "language": "Other",
+      "path": "ui/features/acceptable_use_policy/package.json",
+      "sha256": "69fd51a583ab0963"
+    },
+    {
+      "bytes": 124,
+      "language": "Other",
+      "path": "ui/features/accessibility/accessibility_course_statistics/package.json",
+      "sha256": "39065db8f1afdc58"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/features/account_admin_tools/package.json",
+      "sha256": "ec17678e5929f758"
+    },
+    {
+      "bytes": 119,
+      "language": "Other",
+      "path": "ui/features/account_calendar_settings/package.json",
+      "sha256": "837e6c0ec33d2250"
+    },
+    {
+      "bytes": 119,
+      "language": "Other",
+      "path": "ui/features/account_course_user_search/package.json",
+      "sha256": "96a5e41b846fdf83"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/features/account_grading_settings/package.json",
+      "sha256": "f97527e4337d4a9c"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/features/account_grading_standards/package.json",
+      "sha256": "06b411b8b2b55afe"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/account_manage/package.json",
+      "sha256": "160d8eff14459978"
+    },
+    {
+      "bytes": 123,
+      "language": "Other",
+      "path": "ui/features/account_notification_settings/package.json",
+      "sha256": "027e89393d6b9419"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/account_reports/package.json",
+      "sha256": "74c6bd5155198f86"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/account_search/package.json",
+      "sha256": "be63ce134dba576e"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "ui/features/account_settings/package.json",
+      "sha256": "911d854832a7cb20"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/features/account_statistics/package.json",
+      "sha256": "5ed74d34278bf3ea"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/act_as_modal/package.json",
+      "sha256": "81182f33aa3b15b0"
+    },
+    {
+      "bytes": 104,
+      "language": "Other",
+      "path": "ui/features/admin_split/package.json",
+      "sha256": "adb1718463b4aee9"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/features/ai_experiences_edit/package.json",
+      "sha256": "80a3543c6fdb9c55"
+    },
+    {
+      "bytes": 104,
+      "language": "Other",
+      "path": "ui/features/all_courses/package.json",
+      "sha256": "d491a09b6f5b6565"
+    },
+    {
+      "bytes": 95,
+      "language": "Other",
+      "path": "ui/features/ams/package.json",
+      "sha256": "92ecb32617e1c365"
+    },
+    {
+      "bytes": 106,
+      "language": "Other",
+      "path": "ui/features/analytics_hub/package.json",
+      "sha256": "d18d95703e542022"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/announcements/package.json",
+      "sha256": "4eaea767e0c7bc28"
+    },
+    {
+      "bytes": 119,
+      "language": "Other",
+      "path": "ui/features/announcements_on_home_page/package.json",
+      "sha256": "130e7ff83886e2c0"
+    },
+    {
+      "bytes": 4303,
+      "language": "Markdown",
+      "path": "ui/features/assignment_edit/CLAUDE.md",
+      "sha256": "71bbb151c44083e2"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/assignment_edit/package.json",
+      "sha256": "b53aef96fe5b6298"
+    },
+    {
+      "bytes": 117,
+      "language": "Other",
+      "path": "ui/features/assignment_grade_summary/package.json",
+      "sha256": "0c5995338c72ad5d"
+    },
+    {
+      "bytes": 5729,
+      "language": "Markdown",
+      "path": "ui/features/assignment_index/jst/AGENTS.md",
+      "sha256": "8787a29d9a304f4f"
+    },
+    {
+      "bytes": 9,
+      "language": "Markdown",
+      "path": "ui/features/assignment_index/jst/CLAUDE.md",
+      "sha256": "a54ff182c7e8acf5"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "ui/features/assignment_index/package.json",
+      "sha256": "caa861a49ce8ecb1"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/assignment_show/package.json",
+      "sha256": "9a08fb2e8441b93c"
+    },
+    {
+      "bytes": 117,
+      "language": "Other",
+      "path": "ui/features/assignments_peer_reviews/package.json",
+      "sha256": "c37262db5dded807"
+    },
+    {
+      "bytes": 125,
+      "language": "Other",
+      "path": "ui/features/assignments_peer_reviews_student/package.json",
+      "sha256": "6d968a387f6c36ee"
+    },
+    {
+      "bytes": 117,
+      "language": "Other",
+      "path": "ui/features/assignments_show_student/package.json",
+      "sha256": "2c8f65367672db60"
+    },
+    {
+      "bytes": 117,
+      "language": "Other",
+      "path": "ui/features/assignments_show_teacher/package.json",
+      "sha256": "43098a6c7bed67f0"
+    },
+    {
+      "bytes": 128,
+      "language": "Other",
+      "path": "ui/features/assignments_show_teacher_deprecated/package.json",
+      "sha256": "3be201c371cc6c94"
+    },
+    {
+      "bytes": 117,
+      "language": "Other",
+      "path": "ui/features/authentication_providers/package.json",
+      "sha256": "e484c13dd4fe02be"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "ui/features/available_pronouns_list/package.json",
+      "sha256": "ceb0f5003e1d2f24"
+    },
+    {
+      "bytes": 120,
+      "language": "Other",
+      "path": "ui/features/block_editor_iframe_content/package.json",
+      "sha256": "064cd07ded017df2"
+    },
+    {
+      "bytes": 115,
+      "language": "Other",
+      "path": "ui/features/blueprint_course_child/package.json",
+      "sha256": "b9447e8945bd866d"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "ui/features/blueprint_course_master/package.json",
+      "sha256": "0c226b93cff708cd"
+    },
+    {
+      "bytes": 106,
+      "language": "Other",
+      "path": "ui/features/brand_configs/package.json",
+      "sha256": "1ea93fb6ebff54e6"
+    },
+    {
+      "bytes": 102,
+      "language": "Other",
+      "path": "ui/features/calendar/package.json",
+      "sha256": "8d8cbc3fea995424"
+    },
+    {
+      "bytes": 125,
+      "language": "Other",
+      "path": "ui/features/calendar_appointment_group_edit/package.json",
+      "sha256": "64a1a3aadaace890"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/change_password/package.json",
+      "sha256": "0cdc168c7b7d7ee8"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/features/choose_mastery_path/package.json",
+      "sha256": "d8933d8e9c8583bb"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/collaborations/package.json",
+      "sha256": "49771e25773c65a3"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/conferences/package.json",
+      "sha256": "0b42241228b439d5"
+    },
+    {
+      "bytes": 101,
+      "language": "Other",
+      "path": "ui/features/confetti/package.json",
+      "sha256": "e4c3a58e105a1560"
+    },
+    {
+      "bytes": 106,
+      "language": "Other",
+      "path": "ui/features/confirm_email/package.json",
+      "sha256": "38abf96a3f0066fe"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/content_exports/package.json",
+      "sha256": "b92bd322d283b2bd"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/features/content_migrations/package.json",
+      "sha256": "5e6bf3f1f9338237"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/content_notices/package.json",
+      "sha256": "a208fb0ae68166cc"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/content_shares/package.json",
+      "sha256": "18bc5f414c70af56"
+    },
+    {
+      "bytes": 120,
+      "language": "Other",
+      "path": "ui/features/context_media_object_inline/package.json",
+      "sha256": "4d9f6b5e728306c9"
+    },
+    {
+      "bytes": 119,
+      "language": "Other",
+      "path": "ui/features/context_module_progressions/package.json",
+      "sha256": "6a82d671b85db5ba"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/context_modules/package.json",
+      "sha256": "ae87dbdfcd383838"
+    },
+    {
+      "bytes": 120,
+      "language": "Other",
+      "path": "ui/features/context_modules_publish_icon/package.json",
+      "sha256": "da7b86c9f9854e17"
+    },
+    {
+      "bytes": 120,
+      "language": "Other",
+      "path": "ui/features/context_modules_publish_menu/package.json",
+      "sha256": "bf05a8c7998e68b9"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/features/context_modules_v2/package.json",
+      "sha256": "34a7d42926640d94"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/features/context_roster_user/package.json",
+      "sha256": "5732f2583d205b53"
+    },
+    {
+      "bytes": 121,
+      "language": "Other",
+      "path": "ui/features/context_roster_user_services/package.json",
+      "sha256": "fe57e6d140e0f22d"
+    },
+    {
+      "bytes": 114,
+      "language": "Other",
+      "path": "ui/features/context_undelete_item/package.json",
+      "sha256": "af9aca401ac2d175"
+    },
+    {
+      "bytes": 104,
+      "language": "Other",
+      "path": "ui/features/copy_course/package.json",
+      "sha256": "cc71611aaca8386b"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/features/copy_warnings_modal/package.json",
+      "sha256": "bb024b80b5fdede2"
+    },
+    {
+      "bytes": 98,
+      "language": "Other",
+      "path": "ui/features/course/package.json",
+      "sha256": "9260316f9a38fb27"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/features/course_grading_standards/package.json",
+      "sha256": "30d3625665c2ff41"
+    },
+    {
+      "bytes": 114,
+      "language": "Other",
+      "path": "ui/features/course_link_validator/package.json",
+      "sha256": "b295a98a15211b19"
+    },
+    {
+      "bytes": 103,
+      "language": "Other",
+      "path": "ui/features/course_list/package.json",
+      "sha256": "9eec71cf02e21cd7"
+    },
+    {
+      "bytes": 120,
+      "language": "Other",
+      "path": "ui/features/course_notification_settings/package.json",
+      "sha256": "99deba3793654fff"
+    },
+    {
+      "bytes": 104,
+      "language": "Other",
+      "path": "ui/features/course_paces/package.json",
+      "sha256": "b7e9c4e60c9425f3"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/features/course_people_new/package.json",
+      "sha256": "0ab24b6b8451e776"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/course_settings/package.json",
+      "sha256": "ed74378f89e050e9"
+    },
+    {
+      "bytes": 103,
+      "language": "Other",
+      "path": "ui/features/course_show/package.json",
+      "sha256": "cae5b9e6a6d30d1c"
+    },
+    {
+      "bytes": 113,
+      "language": "Other",
+      "path": "ui/features/course_show_secondary/package.json",
+      "sha256": "2cd05d4c8b1dda40"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "ui/features/course_statistics/package.json",
+      "sha256": "f82dbfd930500de8"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/course_wizard/package.json",
+      "sha256": "e890c4a539fa991d"
+    },
+    {
+      "bytes": 99,
+      "language": "Other",
+      "path": "ui/features/courses/package.json",
+      "sha256": "c92720c42b1a90c9"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/current_groups/package.json",
+      "sha256": "79aae09bb117a14d"
+    },
+    {
+      "bytes": 101,
+      "language": "Other",
+      "path": "ui/features/dashboard/package.json",
+      "sha256": "a5b2445f5a31b01f"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/features/deep_linking_response/package.json",
+      "sha256": "66ee8513922ebb4a"
+    },
+    {
+      "bytes": 114,
+      "language": "Other",
+      "path": "ui/features/developer_keys_v2/package.json",
+      "sha256": "7beddd0d2921934f"
+    },
+    {
+      "bytes": 123,
+      "language": "Other",
+      "path": "ui/features/discovery_page/package.json",
+      "sha256": "0e226ffc6ffef848"
+    },
+    {
+      "bytes": 1042,
+      "language": "Markdown",
+      "path": "ui/features/discovery_page/translations/README.md",
+      "sha256": "c28849a4ba6a2b51"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/features/discussion_topic_edit_v2/package.json",
+      "sha256": "8ecf929b6c6b3d04"
+    },
+    {
+      "bytes": 119,
+      "language": "Other",
+      "path": "ui/features/discussion_topic_insights/package.json",
+      "sha256": "fb68d784bc511d78"
+    },
+    {
+      "bytes": 117,
+      "language": "Other",
+      "path": "ui/features/discussion_topics_index/package.json",
+      "sha256": "8b6247e941e2bf50"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "ui/features/discussion_topics_post/package.json",
+      "sha256": "65e4b7ec8b6f52f5"
+    },
+    {
+      "bytes": 113,
+      "language": "Other",
+      "path": "ui/features/edit_calendar_event/package.json",
+      "sha256": "ecd75edb8260fad0"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/edit_rubric/package.json",
+      "sha256": "fd7861f1bf81b592"
+    },
+    {
+      "bytes": 123,
+      "language": "Other",
+      "path": "ui/features/enhanced_individual_gradebook/package.json",
+      "sha256": "dd44525d1b60e90d"
+    },
+    {
+      "bytes": 103,
+      "language": "Other",
+      "path": "ui/features/eportfolio/package.json",
+      "sha256": "3201d778f5556385"
+    },
+    {
+      "bytes": 114,
+      "language": "Other",
+      "path": "ui/features/eportfolio_moderation/package.json",
+      "sha256": "af7b081564e68031"
+    },
+    {
+      "bytes": 115,
+      "language": "Other",
+      "path": "ui/features/eportfolios_wizard_box/package.json",
+      "sha256": "a2b7c0d5d7db5dca"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/epub_exports/package.json",
+      "sha256": "b42975d5795ee8b6"
+    },
+    {
+      "bytes": 103,
+      "language": "Other",
+      "path": "ui/features/error_form/package.json",
+      "sha256": "dda55173ad768629"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/features/external_apps/package.json",
+      "sha256": "ccd8651735828161"
+    },
+    {
+      "bytes": 120,
+      "language": "Other",
+      "path": "ui/features/external_content_cancel/package.json",
+      "sha256": "d9e307afc7584726"
+    },
+    {
+      "bytes": 121,
+      "language": "Other",
+      "path": "ui/features/external_content_success/package.json",
+      "sha256": "9646ec867e2b562e"
+    },
+    {
+      "bytes": 119,
+      "language": "Other",
+      "path": "ui/features/external_tool_redirect/package.json",
+      "sha256": "2fd584ffdad58d3b"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "ui/features/external_tools_show/package.json",
+      "sha256": "5a87e4135a892d64"
+    },
+    {
+      "bytes": 97,
+      "language": "Other",
+      "path": "ui/features/file/package.json",
+      "sha256": "5c1559153ecf5137"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/file_not_found/package.json",
+      "sha256": "396c7d360e334bbf"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/file_preview/package.json",
+      "sha256": "c02ceccfc056ef3d"
+    },
+    {
+      "bytes": 102,
+      "language": "Other",
+      "path": "ui/features/file_show/package.json",
+      "sha256": "5b2aaf951cb06afc"
+    },
+    {
+      "bytes": 98,
+      "language": "Other",
+      "path": "ui/features/files/package.json",
+      "sha256": "e64de0cfa003ed46"
+    },
+    {
+      "bytes": 101,
+      "language": "Other",
+      "path": "ui/features/files_v2/package.json",
+      "sha256": "1225a271d6f5a5e2"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/grade_summary/package.json",
+      "sha256": "eac7b008d7ef7c11"
+    },
+    {
+      "bytes": 103,
+      "language": "Other",
+      "path": "ui/features/gradebook/package.json",
+      "sha256": "3e3ce7bb9ed16c54"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/features/gradebook_history/package.json",
+      "sha256": "a96770b3bd9aee5e"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/features/gradebook_uploads/package.json",
+      "sha256": "74805280ccfb3085"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/graphiql/package.json",
+      "sha256": "0ca6e83e3b834d97"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/features/group_submission_reminder/package.json",
+      "sha256": "ac9d62aac88d5281"
+    },
+    {
+      "bytes": 99,
+      "language": "Other",
+      "path": "ui/features/groups/package.json",
+      "sha256": "7cd2ed896500a04a"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/horizon_toggle/package.json",
+      "sha256": "1f6d13443117b173"
+    },
+    {
+      "bytes": 99,
+      "language": "Other",
+      "path": "ui/features/inbox/package.json",
+      "sha256": "25b1d318919e7be2"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/inlined_preview/package.json",
+      "sha256": "d2e26dba309ed2e6"
+    },
+    {
+      "bytes": 115,
+      "language": "Other",
+      "path": "ui/features/inst_fs_service_worker/package.json",
+      "sha256": "f6c3e6efe4cafff0"
+    },
+    {
+      "bytes": 101,
+      "language": "Other",
+      "path": "ui/features/job_stats/package.json",
+      "sha256": "e3c29b03503534ad"
+    },
+    {
+      "bytes": 96,
+      "language": "Other",
+      "path": "ui/features/jobs/package.json",
+      "sha256": "f00d22e3bd400c10"
+    },
+    {
+      "bytes": 99,
+      "language": "Other",
+      "path": "ui/features/jobs_v2/package.json",
+      "sha256": "82a60ff624306908"
+    },
+    {
+      "bytes": 101,
+      "language": "Other",
+      "path": "ui/features/k5_course/package.json",
+      "sha256": "88518b0cdd355fad"
+    },
+    {
+      "bytes": 104,
+      "language": "Other",
+      "path": "ui/features/k5_dashboard/package.json",
+      "sha256": "933d0613fa0aab67"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/ldap_cert_upload/package.json",
+      "sha256": "2df9945b291c2b1f"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "ui/features/learning_mastery/package.json",
+      "sha256": "85c92815f629bd53"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/features/learning_mastery_v2/package.json",
+      "sha256": "309ac167529a6752"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/features/learning_outcomes/package.json",
+      "sha256": "1b07cd596a1f64f4"
+    },
+    {
+      "bytes": 99,
+      "language": "Other",
+      "path": "ui/features/locale/package.json",
+      "sha256": "884e852de9e78de9"
+    },
+    {
+      "bytes": 98,
+      "language": "Other",
+      "path": "ui/features/login/package.json",
+      "sha256": "92002791f9f0001f"
+    },
+    {
+      "bytes": 115,
+      "language": "Other",
+      "path": "ui/features/lti_collaborations/package.json",
+      "sha256": "0c1f4294496d17ec"
+    },
+    {
+      "bytes": 3345,
+      "language": "Markdown",
+      "path": "ui/features/lti_registrations/common/lib/useZodParams/Readme.md",
+      "sha256": "e0d2ead9231c7d30"
+    },
+    {
+      "bytes": 114,
+      "language": "Other",
+      "path": "ui/features/lti_registrations/package.json",
+      "sha256": "5061e1d2ee1c828f"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/manage_avatars/package.json",
+      "sha256": "02b018e4366ab46e"
+    },
+    {
+      "bytes": 106,
+      "language": "Other",
+      "path": "ui/features/manage_groups/package.json",
+      "sha256": "382bb774855e86f3"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "ui/features/media_immersive_view/package.json",
+      "sha256": "85fd4a517a6102ec"
+    },
+    {
+      "bytes": 123,
+      "language": "Other",
+      "path": "ui/features/media_player_iframe_content/package.json",
+      "sha256": "c2b3f2ff29b64320"
+    },
+    {
+      "bytes": 101,
+      "language": "Other",
+      "path": "ui/features/messages/package.json",
+      "sha256": "22850da9704e8ff6"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/mobile_login/package.json",
+      "sha256": "b5583f1d615761f2"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/moderate_quiz/package.json",
+      "sha256": "f41f1bb84571fa65"
+    },
+    {
+      "bytes": 102,
+      "language": "Other",
+      "path": "ui/features/module_dnd/package.json",
+      "sha256": "cdffaa8e02a84ddc"
+    },
+    {
+      "bytes": 114,
+      "language": "Other",
+      "path": "ui/features/module_sequence_footer/package.json",
+      "sha256": "1df7eb89512e6fc5"
+    },
+    {
+      "bytes": 117,
+      "language": "Other",
+      "path": "ui/features/module_student_view_peer_reviews/package.json",
+      "sha256": "7d6a44ccfbd83777"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/nav_tourpoints/package.json",
+      "sha256": "6e5235ae19debd22"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/features/navigation_header/package.json",
+      "sha256": "895069c6cc00db1c"
+    },
+    {
+      "bytes": 101,
+      "language": "Other",
+      "path": "ui/features/new_login/package.json",
+      "sha256": "07ec6d55b38d892f"
+    },
+    {
+      "bytes": 135,
+      "language": "Other",
+      "path": "ui/features/new_user_tutorial/package.json",
+      "sha256": "66bed8e2aab87202"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/not_found_index/package.json",
+      "sha256": "5e64b2f2250d62c1"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/oauth2_confirm/package.json",
+      "sha256": "0c82e586c6031da9"
+    },
+    {
+      "bytes": 102,
+      "language": "Other",
+      "path": "ui/features/otp_login/package.json",
+      "sha256": "438cfc6a3f2cde2b"
+    },
+    {
+      "bytes": 113,
+      "language": "Other",
+      "path": "ui/features/outcome_alignment_v2/package.json",
+      "sha256": "93227fc03af242b3"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/features/outcome_alignments/package.json",
+      "sha256": "856c9af26ea88733"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/features/outcome_management/package.json",
+      "sha256": "5e9d80846315dc2e"
+    },
+    {
+      "bytes": 103,
+      "language": "Other",
+      "path": "ui/features/page_views/package.json",
+      "sha256": "b3e3524556c59c6e"
+    },
+    {
+      "bytes": 98,
+      "language": "Other",
+      "path": "ui/features/pages/package.json",
+      "sha256": "9a530f1a446c395d"
+    },
+    {
+      "bytes": 126,
+      "language": "Other",
+      "path": "ui/features/password_complexity_configuration/package.json",
+      "sha256": "55b9ebc1f3a0ea26"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/features/past_global_alert/package.json",
+      "sha256": "edb1bdef4082f856"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/features/past_global_announcements/package.json",
+      "sha256": "6b838d077029cfa2"
+    },
+    {
+      "bytes": 125,
+      "language": "Other",
+      "path": "ui/features/pendo/package.json",
+      "sha256": "cca2e373514193f5"
+    },
+    {
+      "bytes": 104,
+      "language": "Other",
+      "path": "ui/features/permissions/package.json",
+      "sha256": "b35b916c277fa0a1"
+    },
+    {
+      "bytes": 100,
+      "language": "Other",
+      "path": "ui/features/plugins/package.json",
+      "sha256": "48077fb18e3f0e46"
+    },
+    {
+      "bytes": 113,
+      "language": "Other",
+      "path": "ui/features/prerequisites_lookup/package.json",
+      "sha256": "ab0fa122f08eec7e"
+    },
+    {
+      "bytes": 100,
+      "language": "Other",
+      "path": "ui/features/profile/package.json",
+      "sha256": "6f6d49488b7ad7b8"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/profile_show/package.json",
+      "sha256": "2926209d07ea3f4d"
+    },
+    {
+      "bytes": 106,
+      "language": "Other",
+      "path": "ui/features/progress_pill/package.json",
+      "sha256": "0039a565c2fe3ab2"
+    },
+    {
+      "bytes": 277,
+      "language": "Other",
+      "path": "ui/features/public_javascripts_tests/package.json",
+      "sha256": "cf3e08a0a86e1d96"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/qr_mobile_login/package.json",
+      "sha256": "4c9e89887a8cad77"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/question_bank/package.json",
+      "sha256": "5e477586599b074b"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/question_banks/package.json",
+      "sha256": "1fb0d896c904ff64"
+    },
+    {
+      "bytes": 106,
+      "language": "Other",
+      "path": "ui/features/quiz_history/package.json",
+      "sha256": "0c48561dc4541e2a"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/features/quiz_log_auditing/package.json",
+      "sha256": "9a3dca951c426b18"
+    },
+    {
+      "bytes": 450,
+      "language": "Other",
+      "path": "ui/features/quiz_log_auditing/tsconfig.json",
+      "sha256": "a8cedb18dbd224ab"
+    },
+    {
+      "bytes": 115,
+      "language": "Other",
+      "path": "ui/features/quiz_migration_alerts/package.json",
+      "sha256": "3fa350fcbc285431"
+    },
+    {
+      "bytes": 103,
+      "language": "Other",
+      "path": "ui/features/quiz_show/package.json",
+      "sha256": "d08d6f85eddf5799"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "ui/features/quiz_statistics/package.json",
+      "sha256": "17b3308856e09326"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "ui/features/quiz_submission/package.json",
+      "sha256": "856e5a1fab850f5d"
+    },
+    {
+      "bytes": 101,
+      "language": "Other",
+      "path": "ui/features/quizzes/package.json",
+      "sha256": "0a0b06e0279a538d"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/features/quizzes_access_code/package.json",
+      "sha256": "b5b96762edb24217"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/quizzes_index/package.json",
+      "sha256": "db74ed3f944e906d"
+    },
+    {
+      "bytes": 88,
+      "language": "Other",
+      "path": "ui/features/rate_limiting_settings/package.json",
+      "sha256": "d6b1be2070962993"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/registration/package.json",
+      "sha256": "8a6b5aeac53e67a7"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/features/registration_confirmation/package.json",
+      "sha256": "c8dc3832ccc863d5"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/features/release_notes_edit/package.json",
+      "sha256": "5a2501bd57aaf30c"
+    },
+    {
+      "bytes": 99,
+      "language": "Other",
+      "path": "ui/features/roster/package.json",
+      "sha256": "74439d8778119f48"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/features/rubric_assessment/package.json",
+      "sha256": "697a58b6b115afd1"
+    },
+    {
+      "bytes": 101,
+      "language": "Other",
+      "path": "ui/features/rubrics/package.json",
+      "sha256": "dedcedadfac222ca"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/rubrics_index/package.json",
+      "sha256": "2270f86f4002ad9a"
+    },
+    {
+      "bytes": 106,
+      "language": "Other",
+      "path": "ui/features/rubrics_show/package.json",
+      "sha256": "ae56a2639cb03675"
+    },
+    {
+      "bytes": 99,
+      "language": "Other",
+      "path": "ui/features/search/package.json",
+      "sha256": "cc5dfe8ba7f083cf"
+    },
+    {
+      "bytes": 100,
+      "language": "Other",
+      "path": "ui/features/section/package.json",
+      "sha256": "c4c8673dd35317f2"
+    },
+    {
+      "bytes": 114,
+      "language": "Other",
+      "path": "ui/features/select_content_dialog/package.json",
+      "sha256": "522c7fe5726f3a40"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/self_enrollment/package.json",
+      "sha256": "652668332bc2228b"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "ui/features/settings_sidebar/package.json",
+      "sha256": "b580679a88f9f5cd"
+    },
+    {
+      "bytes": 103,
+      "language": "Other",
+      "path": "ui/features/sis_import/package.json",
+      "sha256": "869b278aefc80dc7"
+    },
+    {
+      "bytes": 103,
+      "language": "Other",
+      "path": "ui/features/slickgrid/package.json",
+      "sha256": "6ab6c4b54cc8e15c"
+    },
+    {
+      "bytes": 106,
+      "language": "Other",
+      "path": "ui/features/speed_grader/package.json",
+      "sha256": "39a9f412a925f621"
+    },
+    {
+      "bytes": 113,
+      "language": "Other",
+      "path": "ui/features/student_group_dialog/package.json",
+      "sha256": "7bacc3b472ac8f61"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/sub_accounts/package.json",
+      "sha256": "d14fc9cdf38c9d21"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/features/submission_download/package.json",
+      "sha256": "75583b4bcb7eee16"
+    },
+    {
+      "bytes": 104,
+      "language": "Other",
+      "path": "ui/features/submissions/package.json",
+      "sha256": "f069720983118db8"
+    },
+    {
+      "bytes": 137,
+      "language": "Other",
+      "path": "ui/features/submissions_show_preview_asset_report_status/package.json",
+      "sha256": "892b89525dfd67f9"
+    },
+    {
+      "bytes": 123,
+      "language": "Other",
+      "path": "ui/features/submissions_show_preview_media/package.json",
+      "sha256": "df13d4c9b7ee75a8"
+    },
+    {
+      "bytes": 122,
+      "language": "Other",
+      "path": "ui/features/submissions_show_preview_text/package.json",
+      "sha256": "e240ec9117084f00"
+    },
+    {
+      "bytes": 124,
+      "language": "Other",
+      "path": "ui/features/submissions_show_preview_upload/package.json",
+      "sha256": "714cecd85327588f"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/features/submit_assignment/package.json",
+      "sha256": "9111900bdc7f2d22"
+    },
+    {
+      "bytes": 100,
+      "language": "Other",
+      "path": "ui/features/syllabus/package.json",
+      "sha256": "ac5fb54bef17d132"
+    },
+    {
+      "bytes": 103,
+      "language": "Other",
+      "path": "ui/features/take_quiz/package.json",
+      "sha256": "66578671e0646e8b"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "ui/features/teacher_activity_report/package.json",
+      "sha256": "0ac82da54b8f2bf2"
+    },
+    {
+      "bytes": 104,
+      "language": "Other",
+      "path": "ui/features/terms_index/package.json",
+      "sha256": "542b0d05591bd365"
+    },
+    {
+      "bytes": 115,
+      "language": "Other",
+      "path": "ui/features/terms_of_service_modal/package.json",
+      "sha256": "7783670ac8884035"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/terms_of_use/package.json",
+      "sha256": "d2e984ec85f9020d"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/theme_editor/package.json",
+      "sha256": "da66f4f9f682c70e"
+    },
+    {
+      "bytes": 106,
+      "language": "Other",
+      "path": "ui/features/theme_preview/package.json",
+      "sha256": "69220f907f3cffa4"
+    },
+    {
+      "bytes": 113,
+      "language": "Other",
+      "path": "ui/features/top_navigation_tools/package.json",
+      "sha256": "4ab50cf7744f71be"
+    },
+    {
+      "bytes": 97,
+      "language": "Other",
+      "path": "ui/features/user/package.json",
+      "sha256": "402ebd629507a700"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/features/user_grades/package.json",
+      "sha256": "08edfa86feb04dc9"
+    },
+    {
+      "bytes": 103,
+      "language": "Other",
+      "path": "ui/features/user_lists/package.json",
+      "sha256": "c39c22c787868c7a"
+    },
+    {
+      "bytes": 104,
+      "language": "Other",
+      "path": "ui/features/user_logins/package.json",
+      "sha256": "bdbbffde7f154aa2"
+    },
+    {
+      "bytes": 102,
+      "language": "Other",
+      "path": "ui/features/user_name/package.json",
+      "sha256": "3704e6d234ff744b"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/user_observees/package.json",
+      "sha256": "77b2a59027927c36"
+    },
+    {
+      "bytes": 113,
+      "language": "Other",
+      "path": "ui/features/user_outcome_results/package.json",
+      "sha256": "531c204acfeb9d8c"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/features/users_admin_merge/package.json",
+      "sha256": "1fc0cbe5331221e8"
+    },
+    {
+      "bytes": 104,
+      "language": "Other",
+      "path": "ui/features/users_index/package.json",
+      "sha256": "47351f0d9e9b01d0"
+    },
+    {
+      "bytes": 106,
+      "language": "Other",
+      "path": "ui/features/webzip_export/package.json",
+      "sha256": "ae98ab79b07ed3b6"
+    },
+    {
+      "bytes": 12077,
+      "language": "Markdown",
+      "path": "ui/features/widget_dashboard/README.md",
+      "sha256": "e017d9e60db72834"
+    },
+    {
+      "bytes": 167,
+      "language": "Other",
+      "path": "ui/features/widget_dashboard/package.json",
+      "sha256": "acda45bb503b45ff"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/wiki_page_edit/package.json",
+      "sha256": "f3eddefce5a01b88"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/features/wiki_page_index/package.json",
+      "sha256": "aa10b9b623f06d38"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/features/wiki_page_revisions/package.json",
+      "sha256": "481e9f3b8b533a6f"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/features/wiki_page_show/package.json",
+      "sha256": "8aef416671616453"
+    },
+    {
+      "bytes": 120,
+      "language": "Other",
+      "path": "ui/shared/access-tokens/package.json",
+      "sha256": "c52548b3e5db7c52"
+    },
+    {
+      "bytes": 119,
+      "language": "Other",
+      "path": "ui/shared/account_reports/package.json",
+      "sha256": "51757c6081e1039a"
+    },
+    {
+      "bytes": 145,
+      "language": "Other",
+      "path": "ui/shared/add-people/package.json",
+      "sha256": "5f60ffba17ab7d83"
+    },
+    {
+      "bytes": 120,
+      "language": "Other",
+      "path": "ui/shared/ai-experiences/package.json",
+      "sha256": "6ae82c62bf6f0ea0"
+    },
+    {
+      "bytes": 80,
+      "language": "Other",
+      "path": "ui/shared/ai-information/package.json",
+      "sha256": "c58426d154ff4bc2"
+    },
+    {
+      "bytes": 117,
+      "language": "Other",
+      "path": "ui/shared/ams/package.json",
+      "sha256": "6a1b5c7b947c8715"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/shared/announcements/package.json",
+      "sha256": "f2aa92a93229eae4"
+    },
+    {
+      "bytes": 115,
+      "language": "Other",
+      "path": "ui/shared/api/package.json",
+      "sha256": "1efff168b4c439b8"
+    },
+    {
+      "bytes": 137,
+      "language": "Other",
+      "path": "ui/shared/apollo-v3/package.json",
+      "sha256": "4497af68d5099f68"
+    },
+    {
+      "bytes": 139,
+      "language": "Other",
+      "path": "ui/shared/array-erase/package.json",
+      "sha256": "fcdd945cf78abd71"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "ui/shared/assignments/package.json",
+      "sha256": "8e2ff375bb9267a0"
+    },
+    {
+      "bytes": 153,
+      "language": "Other",
+      "path": "ui/shared/authenticity-token/package.json",
+      "sha256": "2a8ec16840c971b3"
+    },
+    {
+      "bytes": 153,
+      "language": "Other",
+      "path": "ui/shared/avatar-dialog-view/package.json",
+      "sha256": "d38038a6bf1d56dc"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/shared/avatar/package.json",
+      "sha256": "31a63255a46391c5"
+    },
+    {
+      "bytes": 159,
+      "language": "Other",
+      "path": "ui/shared/await-element/package.json",
+      "sha256": "5f7564ebf8b447e3"
+    },
+    {
+      "bytes": 133,
+      "language": "Other",
+      "path": "ui/shared/axios/package.json",
+      "sha256": "f54a662f5410a656"
+    },
+    {
+      "bytes": 167,
+      "language": "Other",
+      "path": "ui/shared/backbone-collection-view/package.json",
+      "sha256": "e9ce84e79fdd4f1d"
+    },
+    {
+      "bytes": 155,
+      "language": "Other",
+      "path": "ui/shared/backbone-input-filter-view/package.json",
+      "sha256": "eadca2a32aafb166"
+    },
+    {
+      "bytes": 151,
+      "language": "Other",
+      "path": "ui/shared/backbone-input-view/package.json",
+      "sha256": "387f279a6b0145fb"
+    },
+    {
+      "bytes": 136,
+      "language": "Other",
+      "path": "ui/shared/backbone/package.json",
+      "sha256": "ca385e0c0d117930"
+    },
+    {
+      "bytes": 142,
+      "language": "Other",
+      "path": "ui/shared/backoff-poller/package.json",
+      "sha256": "8c37aa974491d7d9"
+    },
+    {
+      "bytes": 104,
+      "language": "Other",
+      "path": "ui/shared/block-content-editor/package.json",
+      "sha256": "7ce31d4590050244"
+    },
+    {
+      "bytes": 147,
+      "language": "Other",
+      "path": "ui/shared/block-editor/package.json",
+      "sha256": "5cfe14d2f2eb884a"
+    },
+    {
+      "bytes": 2356,
+      "language": "Markdown",
+      "path": "ui/shared/block-editor/react/assets/globalTemplates/README.md",
+      "sha256": "40621fbbe2896489"
+    },
+    {
+      "bytes": 120,
+      "language": "Other",
+      "path": "ui/shared/blueprint-courses/package.json",
+      "sha256": "d85611a5013a2853"
+    },
+    {
+      "bytes": 141,
+      "language": "Other",
+      "path": "ui/shared/brandable-css/package.json",
+      "sha256": "deaa9c105080c88f"
+    },
+    {
+      "bytes": 139,
+      "language": "Other",
+      "path": "ui/shared/breadcrumbs/package.json",
+      "sha256": "758ad521182a95e3"
+    },
+    {
+      "bytes": 3071,
+      "language": "Markdown",
+      "path": "ui/shared/breakpoints/README.md",
+      "sha256": "d0cf0dc1104b429e"
+    },
+    {
+      "bytes": 201,
+      "language": "Other",
+      "path": "ui/shared/breakpoints/package.json",
+      "sha256": "df2f04070e4fcbaa"
+    },
+    {
+      "bytes": 14,
+      "language": "Other",
+      "path": "ui/shared/bundles/.gitignore",
+      "sha256": "7b7cf40ec674fc7d"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/shared/bundles/package.json",
+      "sha256": "d94d9084c70cbaf8"
+    },
+    {
+      "bytes": 125,
+      "language": "Other",
+      "path": "ui/shared/calendar-conferences/package.json",
+      "sha256": "69896af50c63db7e"
+    },
+    {
+      "bytes": 113,
+      "language": "Other",
+      "path": "ui/shared/calendar/package.json",
+      "sha256": "bde15affd11ae157"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/shared/canvas-file-upload/package.json",
+      "sha256": "a6af070fb5528522"
+    },
+    {
+      "bytes": 200,
+      "language": "Other",
+      "path": "ui/shared/canvas-media-player/package.json",
+      "sha256": "c54083b0e5653910"
+    },
+    {
+      "bytes": 205,
+      "language": "Other",
+      "path": "ui/shared/canvas-studio-player/package.json",
+      "sha256": "167640f5d98c0750"
+    },
+    {
+      "bytes": 147,
+      "language": "Other",
+      "path": "ui/shared/color-picker/package.json",
+      "sha256": "5b3ba2ebcf19a31d"
+    },
+    {
+      "bytes": 146,
+      "language": "Other",
+      "path": "ui/shared/combo-box/package.json",
+      "sha256": "626402f1c91706b3"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/shared/common/package.json",
+      "sha256": "9aa796521be3fbda"
+    },
+    {
+      "bytes": 158,
+      "language": "Other",
+      "path": "ui/shared/conditional-release-cyoe-helper/package.json",
+      "sha256": "adddbfa63a2c8609"
+    },
+    {
+      "bytes": 160,
+      "language": "Other",
+      "path": "ui/shared/conditional-release-editor/package.json",
+      "sha256": "9765a25209eb55ee"
+    },
+    {
+      "bytes": 152,
+      "language": "Other",
+      "path": "ui/shared/conditional-release-score/package.json",
+      "sha256": "5fbbf46f6bb80b92"
+    },
+    {
+      "bytes": 157,
+      "language": "Other",
+      "path": "ui/shared/conditional-release-stats/package.json",
+      "sha256": "62f120088db2f899"
+    },
+    {
+      "bytes": 144,
+      "language": "Other",
+      "path": "ui/shared/confetti/package.json",
+      "sha256": "7b651728787df4b8"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "ui/shared/content-locks/package.json",
+      "sha256": "e0b68f699b64222d"
+    },
+    {
+      "bytes": 122,
+      "language": "Other",
+      "path": "ui/shared/content-migrations/package.json",
+      "sha256": "b4115b26216e9727"
+    },
+    {
+      "bytes": 119,
+      "language": "Other",
+      "path": "ui/shared/content-sharing/package.json",
+      "sha256": "f36f34f08bd5c100"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "ui/shared/context-cards/package.json",
+      "sha256": "82c81ae5bc77a684"
+    },
+    {
+      "bytes": 158,
+      "language": "Other",
+      "path": "ui/shared/context-module-file-drop/package.json",
+      "sha256": "9960cde728ac1941"
+    },
+    {
+      "bytes": 150,
+      "language": "Other",
+      "path": "ui/shared/context-modules/package.json",
+      "sha256": "c59f124ccc608505"
+    },
+    {
+      "bytes": 147,
+      "language": "Other",
+      "path": "ui/shared/convert-case/package.json",
+      "sha256": "15d8c3b544d3b159"
+    },
+    {
+      "bytes": 169,
+      "language": "Other",
+      "path": "ui/shared/copy-to-clipboard-button/package.json",
+      "sha256": "c99cbd00271e67b8"
+    },
+    {
+      "bytes": 165,
+      "language": "Other",
+      "path": "ui/shared/copy-to-clipboard/package.json",
+      "sha256": "24a74d23db8a86d2"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/shared/course-homepage/package.json",
+      "sha256": "6a8519a1c13b4a5e"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/shared/courses/package.json",
+      "sha256": "06b929ebb0961f21"
+    },
+    {
+      "bytes": 130,
+      "language": "Other",
+      "path": "ui/shared/create-course-modal/package.json",
+      "sha256": "7749cd7bffa8b9b2"
+    },
+    {
+      "bytes": 154,
+      "language": "Other",
+      "path": "ui/shared/dashboard-card/package.json",
+      "sha256": "1681bc1d3d53564d"
+    },
+    {
+      "bytes": 119,
+      "language": "Other",
+      "path": "ui/shared/dashboard-toggle/package.json",
+      "sha256": "0c0d49ba37c94b18"
+    },
+    {
+      "bytes": 114,
+      "language": "Other",
+      "path": "ui/shared/date-group/package.json",
+      "sha256": "1d60192994690406"
+    },
+    {
+      "bytes": 274,
+      "language": "Other",
+      "path": "ui/shared/datetime-natural-parsing-instrument/package.json",
+      "sha256": "f22b9836f4b72d73"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/shared/datetime/package.json",
+      "sha256": "715302701b416e26"
+    },
+    {
+      "bytes": 120,
+      "language": "Other",
+      "path": "ui/shared/day-substitution/package.json",
+      "sha256": "4bf9550a1786ae21"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "ui/shared/deep-linking/package.json",
+      "sha256": "ef03188d9e25d4fd"
+    },
+    {
+      "bytes": 144,
+      "language": "Other",
+      "path": "ui/shared/dialog-base-view/package.json",
+      "sha256": "284b15c218836d75"
+    },
+    {
+      "bytes": 155,
+      "language": "Other",
+      "path": "ui/shared/dialogs/package.json",
+      "sha256": "a08f30d64ce42678"
+    },
+    {
+      "bytes": 7073,
+      "language": "Markdown",
+      "path": "ui/shared/differentiation-tags/CLAUDE.md",
+      "sha256": "8b5b13aa82b006ee"
+    },
+    {
+      "bytes": 104,
+      "language": "Other",
+      "path": "ui/shared/differentiation-tags/package.json",
+      "sha256": "c951ecc1aa70065a"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/shared/direct-sharing/package.json",
+      "sha256": "24d6e1c995649df4"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "ui/shared/discussions/package.json",
+      "sha256": "c2821f3119555a84"
+    },
+    {
+      "bytes": 165,
+      "language": "Other",
+      "path": "ui/shared/do-fetch-api-effect/package.json",
+      "sha256": "8118a45a6d1962f1"
+    },
+    {
+      "bytes": 161,
+      "language": "Other",
+      "path": "ui/shared/download-submissions-modal/package.json",
+      "sha256": "ef877c9925b8bbdc"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/shared/dsr/package.json",
+      "sha256": "d326109eedba64e7"
+    },
+    {
+      "bytes": 163,
+      "language": "Other",
+      "path": "ui/shared/due-dates/package.json",
+      "sha256": "5dbeec555df626da"
+    },
+    {
+      "bytes": 151,
+      "language": "Other",
+      "path": "ui/shared/easy-student-view/package.json",
+      "sha256": "466fe6424ae35a4b"
+    },
+    {
+      "bytes": 164,
+      "language": "Other",
+      "path": "ui/shared/editor-toggle/package.json",
+      "sha256": "5119b622f53cb4b8"
+    },
+    {
+      "bytes": 140,
+      "language": "Other",
+      "path": "ui/shared/emoji/package.json",
+      "sha256": "5c23d502625137af"
+    },
+    {
+      "bytes": 176,
+      "language": "Other",
+      "path": "ui/shared/enhanced-user-content/package.json",
+      "sha256": "cfcfe63802051cdd"
+    },
+    {
+      "bytes": 106,
+      "language": "Other",
+      "path": "ui/shared/error-page-utils/package.json",
+      "sha256": "2f483f28f8b13649"
+    },
+    {
+      "bytes": 140,
+      "language": "Other",
+      "path": "ui/shared/escape-regex/package.json",
+      "sha256": "11c47e26037e1299"
+    },
+    {
+      "bytes": 117,
+      "language": "Other",
+      "path": "ui/shared/external-apps/package.json",
+      "sha256": "30c5a1eb2391e61b"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/shared/external-tools/package.json",
+      "sha256": "2eb23ad67f6557f8"
+    },
+    {
+      "bytes": 155,
+      "language": "Other",
+      "path": "ui/shared/feature-flags/package.json",
+      "sha256": "fa580da74d046002"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "ui/shared/files/package.json",
+      "sha256": "84bb506838030009"
+    },
+    {
+      "bytes": 92,
+      "language": "Other",
+      "path": "ui/shared/files_v2/package.json",
+      "sha256": "a998c0bfb3142f1e"
+    },
+    {
+      "bytes": 140,
+      "language": "Other",
+      "path": "ui/shared/filter-bar/package.json",
+      "sha256": "482ea5d902daa74c"
+    },
+    {
+      "bytes": 149,
+      "language": "Other",
+      "path": "ui/shared/final-grade-override/package.json",
+      "sha256": "ae4c94e3f4a06d75"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "ui/shared/forms/package.json",
+      "sha256": "786ebbe55a4c7f8b"
+    },
+    {
+      "bytes": 145,
+      "language": "Other",
+      "path": "ui/shared/fuzzy-relative-time/package.json",
+      "sha256": "e9245b4a6cf2a94d"
+    },
+    {
+      "bytes": 156,
+      "language": "Other",
+      "path": "ui/shared/generate-pairing-code/package.json",
+      "sha256": "3b47a16d9af99e3c"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/shared/global/package.json",
+      "sha256": "3834459eced84cbb"
+    },
+    {
+      "bytes": 174,
+      "language": "Other",
+      "path": "ui/shared/grade-summary/package.json",
+      "sha256": "6d1b005b08b1a7ee"
+    },
+    {
+      "bytes": 130,
+      "language": "Other",
+      "path": "ui/shared/gradebook-content-filters/package.json",
+      "sha256": "9eefefc85b0bcaf2"
+    },
+    {
+      "bytes": 158,
+      "language": "Other",
+      "path": "ui/shared/gradebook-menu/package.json",
+      "sha256": "3c9eee7a9f486069"
+    },
+    {
+      "bytes": 146,
+      "language": "Other",
+      "path": "ui/shared/grading-scheme/package.json",
+      "sha256": "4a1e0ec93503b076"
+    },
+    {
+      "bytes": 163,
+      "language": "Other",
+      "path": "ui/shared/grading-standard-collection/package.json",
+      "sha256": "5276cf10c09e2651"
+    },
+    {
+      "bytes": 153,
+      "language": "Other",
+      "path": "ui/shared/grading-standards/package.json",
+      "sha256": "fc3b07190ff97429"
+    },
+    {
+      "bytes": 153,
+      "language": "Other",
+      "path": "ui/shared/grading-status-list-item/package.json",
+      "sha256": "0ab3e0e49e27a64a"
+    },
+    {
+      "bytes": 155,
+      "language": "Other",
+      "path": "ui/shared/grading-status-pill/package.json",
+      "sha256": "26cda1f05349e207"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/shared/grading/package.json",
+      "sha256": "58d9248da220e466"
+    },
+    {
+      "bytes": 7661,
+      "language": "Markdown",
+      "path": "ui/shared/graphql-query-mock/README.md",
+      "sha256": "b4e987ba9e61261d"
+    },
+    {
+      "bytes": 144,
+      "language": "Other",
+      "path": "ui/shared/graphql-query-mock/package.json",
+      "sha256": "4ae114e44d11f95a"
+    },
+    {
+      "bytes": 8,
+      "language": "Other",
+      "path": "ui/shared/graphql/.gitignore",
+      "sha256": "9ffb79783b648b15"
+    },
+    {
+      "bytes": 135,
+      "language": "Other",
+      "path": "ui/shared/graphql/package.json",
+      "sha256": "a7e8364d136ad54d"
+    },
+    {
+      "bytes": 146,
+      "language": "Other",
+      "path": "ui/shared/group-modal/package.json",
+      "sha256": "8d3a9846463bd32d"
+    },
+    {
+      "bytes": 129,
+      "language": "Other",
+      "path": "ui/shared/group-navigation-selector/package.json",
+      "sha256": "3abe971b9c5861e1"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/shared/groups/package.json",
+      "sha256": "840ebb919bbcfb17"
+    },
+    {
+      "bytes": 146,
+      "language": "Other",
+      "path": "ui/shared/handlebars-helpers/package.json",
+      "sha256": "e04f65180a780ad7"
+    },
+    {
+      "bytes": 145,
+      "language": "Other",
+      "path": "ui/shared/help-dialog/package.json",
+      "sha256": "0dc01b2356ccad64"
+    },
+    {
+      "bytes": 163,
+      "language": "Other",
+      "path": "ui/shared/hide-assignment-grades-tray/package.json",
+      "sha256": "a366fb36c546d49a"
+    },
+    {
+      "bytes": 123,
+      "language": "Other",
+      "path": "ui/shared/horizon/package.json",
+      "sha256": "b2a05aa1e9bff765"
+    },
+    {
+      "bytes": 154,
+      "language": "Other",
+      "path": "ui/shared/i18n/package.json",
+      "sha256": "b7dd6691bd3fa171"
+    },
+    {
+      "bytes": 120,
+      "language": "Other",
+      "path": "ui/shared/immersive-reader/package.json",
+      "sha256": "3f756aacfbe60811"
+    },
+    {
+      "bytes": 170,
+      "language": "Other",
+      "path": "ui/shared/infinite-scroll/package.json",
+      "sha256": "b8fe4ebde00cb25b"
+    },
+    {
+      "bytes": 129,
+      "language": "Other",
+      "path": "ui/shared/integrations/package.json",
+      "sha256": "e3cea16fa18de40e"
+    },
+    {
+      "bytes": 153,
+      "language": "Other",
+      "path": "ui/shared/jquery-keycodes/package.json",
+      "sha256": "d8ed438f496f06d3"
+    },
+    {
+      "bytes": 141,
+      "language": "Other",
+      "path": "ui/shared/jquery-sticky/package.json",
+      "sha256": "91a44a6c1787dfc1"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/shared/jquery/package.json",
+      "sha256": "327231f2199c6c98"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/shared/k5/package.json",
+      "sha256": "d3abfcb4620244c1"
+    },
+    {
+      "bytes": 162,
+      "language": "Other",
+      "path": "ui/shared/keyboard-nav-dialog/package.json",
+      "sha256": "e913c4babcaccb33"
+    },
+    {
+      "bytes": 147,
+      "language": "Other",
+      "path": "ui/shared/lazy-load/package.json",
+      "sha256": "b918286d95b2a196"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/shared/learning-agent/package.json",
+      "sha256": "58e6703a16619587"
+    },
+    {
+      "bytes": 105,
+      "language": "Other",
+      "path": "ui/shared/list-view-checkpoints/package.json",
+      "sha256": "ef3b75346ff3ac19"
+    },
+    {
+      "bytes": 148,
+      "language": "Other",
+      "path": "ui/shared/loading-image/package.json",
+      "sha256": "eda2c5faea320128"
+    },
+    {
+      "bytes": 117,
+      "language": "Other",
+      "path": "ui/shared/local-storage/package.json",
+      "sha256": "f35e91393a084200"
+    },
+    {
+      "bytes": 152,
+      "language": "Other",
+      "path": "ui/shared/lock-icon/package.json",
+      "sha256": "1038bff634199029"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/shared/lti-apps/package.json",
+      "sha256": "f69f5cbe8c466cc0"
+    },
+    {
+      "bytes": 127,
+      "language": "Other",
+      "path": "ui/shared/lti-asset-processor/package.json",
+      "sha256": "02f88ab57a2b99ea"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/shared/lti/package.json",
+      "sha256": "829e39e3a5a31ecb"
+    },
+    {
+      "bytes": 145,
+      "language": "Other",
+      "path": "ui/shared/make-promise-pool/package.json",
+      "sha256": "6b3f6ca19ef3f501"
+    },
+    {
+      "bytes": 174,
+      "language": "Other",
+      "path": "ui/shared/mastery-path-toggle/package.json",
+      "sha256": "77cb80c60de6f2f2"
+    },
+    {
+      "bytes": 149,
+      "language": "Other",
+      "path": "ui/shared/media-comments/package.json",
+      "sha256": "3e13a9991911569f"
+    },
+    {
+      "bytes": 152,
+      "language": "Other",
+      "path": "ui/shared/media-recorder/package.json",
+      "sha256": "a3d64d33c3b86740"
+    },
+    {
+      "bytes": 140,
+      "language": "Other",
+      "path": "ui/shared/mediaelement/package.json",
+      "sha256": "4d1db64b1846e255"
+    },
+    {
+      "bytes": 124,
+      "language": "Other",
+      "path": "ui/shared/message-attachments/package.json",
+      "sha256": "f972b2e56d8c1620"
+    },
+    {
+      "bytes": 167,
+      "language": "Other",
+      "path": "ui/shared/message-students-dialog/package.json",
+      "sha256": "f9e26d055d69cd28"
+    },
+    {
+      "bytes": 158,
+      "language": "Other",
+      "path": "ui/shared/message-students-modal/package.json",
+      "sha256": "507fd878c07955e5"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/shared/mime/package.json",
+      "sha256": "976ae9643ab7b15c"
+    },
+    {
+      "bytes": 140,
+      "language": "Other",
+      "path": "ui/shared/modal/package.json",
+      "sha256": "944ada012996ed3e"
+    },
+    {
+      "bytes": 157,
+      "language": "Other",
+      "path": "ui/shared/module-sequence-footer/package.json",
+      "sha256": "e4b1dbf4a2daad7c"
+    },
+    {
+      "bytes": 110,
+      "language": "Other",
+      "path": "ui/shared/modules/package.json",
+      "sha256": "87aab1d64168869c"
+    },
+    {
+      "bytes": 142,
+      "language": "Other",
+      "path": "ui/shared/move-item-tray/package.json",
+      "sha256": "edad5a284afd8ba9"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/shared/msw/package.json",
+      "sha256": "5cc178d88749c9d4"
+    },
+    {
+      "bytes": 147,
+      "language": "Other",
+      "path": "ui/shared/multi-select/package.json",
+      "sha256": "63980af9c2753f66"
+    },
+    {
+      "bytes": 141,
+      "language": "Other",
+      "path": "ui/shared/mutex-manager/package.json",
+      "sha256": "af612b0d5194bbf1"
+    },
+    {
+      "bytes": 122,
+      "language": "Other",
+      "path": "ui/shared/nav-menu-links/package.json",
+      "sha256": "fd288492824d6f4d"
+    },
+    {
+      "bytes": 136,
+      "language": "Other",
+      "path": "ui/shared/network/package.json",
+      "sha256": "8e65395dd8dfd9d7"
+    },
+    {
+      "bytes": 157,
+      "language": "Other",
+      "path": "ui/shared/normalize-registration-errors/package.json",
+      "sha256": "fd0cffcdb167897d"
+    },
+    {
+      "bytes": 167,
+      "language": "Other",
+      "path": "ui/shared/notification-preferences-course/package.json",
+      "sha256": "5c3615160d6f6726"
+    },
+    {
+      "bytes": 160,
+      "language": "Other",
+      "path": "ui/shared/notification-preferences/package.json",
+      "sha256": "df4edb6e31095bba"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/shared/notifications/package.json",
+      "sha256": "3ae11f4a72ca117f"
+    },
+    {
+      "bytes": 245,
+      "language": "Other",
+      "path": "ui/shared/nutrition-facts/package.json",
+      "sha256": "efb2ed0f74a2d453"
+    },
+    {
+      "bytes": 138,
+      "language": "Other",
+      "path": "ui/shared/obj-select/package.json",
+      "sha256": "8c5b812244e5723e"
+    },
+    {
+      "bytes": 167,
+      "language": "Other",
+      "path": "ui/shared/observer-picker/package.json",
+      "sha256": "bb29cdcf666c841a"
+    },
+    {
+      "bytes": 154,
+      "language": "Other",
+      "path": "ui/shared/outcome-context-tag/package.json",
+      "sha256": "6a6a42d6b3ee434a"
+    },
+    {
+      "bytes": 151,
+      "language": "Other",
+      "path": "ui/shared/outcome-gradebook-grid/package.json",
+      "sha256": "0e211b76e41078d9"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/shared/outcomes/package.json",
+      "sha256": "a0e2f650e7d0991f"
+    },
+    {
+      "bytes": 117,
+      "language": "Other",
+      "path": "ui/shared/package-tests/package.json",
+      "sha256": "09c0e224eeedc0af"
+    },
+    {
+      "bytes": 114,
+      "language": "Other",
+      "path": "ui/shared/pagination/package.json",
+      "sha256": "ea90fc5ea4af8b2b"
+    },
+    {
+      "bytes": 144,
+      "language": "Other",
+      "path": "ui/shared/panda-pub-client/package.json",
+      "sha256": "8d1c5538de43b0e2"
+    },
+    {
+      "bytes": 144,
+      "language": "Other",
+      "path": "ui/shared/panda-pub-poller/package.json",
+      "sha256": "eb1bd6880a25194a"
+    },
+    {
+      "bytes": 175,
+      "language": "Other",
+      "path": "ui/shared/parse-link-header/package.json",
+      "sha256": "5c8a52feaaeeec68"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "ui/shared/pendo/package.json",
+      "sha256": "57e4735505957901"
+    },
+    {
+      "bytes": 115,
+      "language": "Other",
+      "path": "ui/shared/permissions/package.json",
+      "sha256": "870da6b212ebcb28"
+    },
+    {
+      "bytes": 137,
+      "language": "Other",
+      "path": "ui/shared/planner/package.json",
+      "sha256": "7933b2d7bf39555d"
+    },
+    {
+      "bytes": 140,
+      "language": "Other",
+      "path": "ui/shared/positions/package.json",
+      "sha256": "550b2e7b55a18202"
+    },
+    {
+      "bytes": 163,
+      "language": "Other",
+      "path": "ui/shared/post-assignment-grades-tray/package.json",
+      "sha256": "318a5954784126be"
+    },
+    {
+      "bytes": 113,
+      "language": "Other",
+      "path": "ui/shared/progress/package.json",
+      "sha256": "8313d1102c686e03"
+    },
+    {
+      "bytes": 101,
+      "language": "Other",
+      "path": "ui/shared/proxy-submission/package.json",
+      "sha256": "10a2a9e95acafe65"
+    },
+    {
+      "bytes": 114,
+      "language": "Other",
+      "path": "ui/shared/pseudonyms/package.json",
+      "sha256": "fbc6f14499e0ad3d"
+    },
+    {
+      "bytes": 164,
+      "language": "Other",
+      "path": "ui/shared/publish-button-view/package.json",
+      "sha256": "28a106a0dcecee6c"
+    },
+    {
+      "bytes": 161,
+      "language": "Other",
+      "path": "ui/shared/publish-icon-view/package.json",
+      "sha256": "1a87add5c3dcbf24"
+    },
+    {
+      "bytes": 126,
+      "language": "Other",
+      "path": "ui/shared/quiz-legacy-client-apps/package.json",
+      "sha256": "b4ed5b3406b9220d"
+    },
+    {
+      "bytes": 158,
+      "language": "Other",
+      "path": "ui/shared/quiz-log-auditing/package.json",
+      "sha256": "75401baa5230ab41"
+    },
+    {
+      "bytes": 92,
+      "language": "Other",
+      "path": "ui/shared/quizzes/package.json",
+      "sha256": "ff40c265cb742177"
+    },
+    {
+      "bytes": 160,
+      "language": "Other",
+      "path": "ui/shared/rails-flash-notifications/package.json",
+      "sha256": "712c24f0d2076f3c"
+    },
+    {
+      "bytes": 153,
+      "language": "Other",
+      "path": "ui/shared/rce-command-shim/package.json",
+      "sha256": "48386667ab30b571"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/shared/rce/package.json",
+      "sha256": "e5c11917095eda42"
+    },
+    {
+      "bytes": 140,
+      "language": "Other",
+      "path": "ui/shared/react-modal/package.json",
+      "sha256": "dfb66c7cf80b3d00"
+    },
+    {
+      "bytes": 140,
+      "language": "Other",
+      "path": "ui/shared/react/package.json",
+      "sha256": "9f5f45d3959b9526"
+    },
+    {
+      "bytes": 118,
+      "language": "Other",
+      "path": "ui/shared/read-icon/package.json",
+      "sha256": "67ba58e06df0cc0a"
+    },
+    {
+      "bytes": 162,
+      "language": "Other",
+      "path": "ui/shared/relock-modules-dialog/package.json",
+      "sha256": "bd5a70f307faca4d"
+    },
+    {
+      "bytes": 133,
+      "language": "Other",
+      "path": "ui/shared/round/package.json",
+      "sha256": "c075299f7d78a5bf"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/shared/rubrics/package.json",
+      "sha256": "8ef55152370fd1ee"
+    },
+    {
+      "bytes": 124,
+      "language": "Other",
+      "path": "ui/shared/schemas/package.json",
+      "sha256": "0aab8979fdfc959f"
+    },
+    {
+      "bytes": 137,
+      "language": "Other",
+      "path": "ui/shared/search-item-selector/package.json",
+      "sha256": "b3b68fb2f1762762"
+    },
+    {
+      "bytes": 151,
+      "language": "Other",
+      "path": "ui/shared/sections-tooltip/package.json",
+      "sha256": "415b7cb31ec25f32"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/shared/sections/package.json",
+      "sha256": "211ed717a587b4be"
+    },
+    {
+      "bytes": 173,
+      "language": "Other",
+      "path": "ui/shared/select-content-dialog/package.json",
+      "sha256": "4fcd5e2f0453441c"
+    },
+    {
+      "bytes": 150,
+      "language": "Other",
+      "path": "ui/shared/select-position/package.json",
+      "sha256": "c8bc11452824c726"
+    },
+    {
+      "bytes": 157,
+      "language": "Other",
+      "path": "ui/shared/serialize-form/package.json",
+      "sha256": "9795a12675c95849"
+    },
+    {
+      "bytes": 112,
+      "language": "Other",
+      "path": "ui/shared/services/package.json",
+      "sha256": "5bbc089a6811cfe6"
+    },
+    {
+      "bytes": 143,
+      "language": "Other",
+      "path": "ui/shared/settings-query/package.json",
+      "sha256": "097d920e5e4de08e"
+    },
+    {
+      "bytes": 133,
+      "language": "Other",
+      "path": "ui/shared/shave/package.json",
+      "sha256": "58f9280522d2aa4f"
+    },
+    {
+      "bytes": 135,
+      "language": "Other",
+      "path": "ui/shared/shortid/package.json",
+      "sha256": "b4a29de732489d4e"
+    },
+    {
+      "bytes": 148,
+      "language": "Other",
+      "path": "ui/shared/signup-dialog/package.json",
+      "sha256": "de40e2a3233137e6"
+    },
+    {
+      "bytes": 107,
+      "language": "Other",
+      "path": "ui/shared/sis/package.json",
+      "sha256": "c69d14e45905e734"
+    },
+    {
+      "bytes": 137,
+      "language": "Other",
+      "path": "ui/shared/sparkles/package.json",
+      "sha256": "693ec1d918ff361a"
+    },
+    {
+      "bytes": 153,
+      "language": "Other",
+      "path": "ui/shared/speed-grader-link/package.json",
+      "sha256": "8639885a6efc3d1f"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/shared/spinner/package.json",
+      "sha256": "3cc90d298aea25a4"
+    },
+    {
+      "bytes": 130,
+      "language": "Other",
+      "path": "ui/shared/split-and-line-icon/package.json",
+      "sha256": "479138d203c6eb17"
+    },
+    {
+      "bytes": 212,
+      "language": "Other",
+      "path": "ui/shared/stub-env/package.json",
+      "sha256": "2e7979d9ecc5c21d"
+    },
+    {
+      "bytes": 98,
+      "language": "Other",
+      "path": "ui/shared/student-alerts/package.json",
+      "sha256": "f3708d59d48aba82"
+    },
+    {
+      "bytes": 155,
+      "language": "Other",
+      "path": "ui/shared/student-group-filter/package.json",
+      "sha256": "6451b5b63645920d"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "ui/shared/student_view_peer_reviews/package.json",
+      "sha256": "5a8d2138b380dfc0"
+    },
+    {
+      "bytes": 127,
+      "language": "Other",
+      "path": "ui/shared/submission-sticker/package.json",
+      "sha256": "a190b8b805b6aba2"
+    },
+    {
+      "bytes": 146,
+      "language": "Other",
+      "path": "ui/shared/svg-wrapper/package.json",
+      "sha256": "0edb06218ec33bd8"
+    },
+    {
+      "bytes": 111,
+      "language": "Other",
+      "path": "ui/shared/syllabus/package.json",
+      "sha256": "7a164112dbda7dd3"
+    },
+    {
+      "bytes": 124,
+      "language": "Other",
+      "path": "ui/shared/temporary-enrollment/package.json",
+      "sha256": "6b1bcf80a29e62d7"
+    },
+    {
+      "bytes": 153,
+      "language": "Other",
+      "path": "ui/shared/terminate-sessions/package.json",
+      "sha256": "61ddcdf194b9ac08"
+    },
+    {
+      "bytes": 114,
+      "language": "Other",
+      "path": "ui/shared/test-utils/package.json",
+      "sha256": "564129db5bf7ffbc"
+    },
+    {
+      "bytes": 116,
+      "language": "Other",
+      "path": "ui/shared/theme-editor/package.json",
+      "sha256": "dc35dc8fac65a863"
+    },
+    {
+      "bytes": 143,
+      "language": "Other",
+      "path": "ui/shared/top-navigation/package.json",
+      "sha256": "94a41921a0de29bd"
+    },
+    {
+      "bytes": 140,
+      "language": "Other",
+      "path": "ui/shared/tour-pubsub/package.json",
+      "sha256": "672f62224be3461c"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "ui/shared/trays/package.json",
+      "sha256": "4b375395f70e3d6d"
+    },
+    {
+      "bytes": 170,
+      "language": "Other",
+      "path": "ui/shared/tree-browser-view/package.json",
+      "sha256": "1d04711e05f586fc"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "ui/shared/types/package.json",
+      "sha256": "eee4a86e568a6466"
+    },
+    {
+      "bytes": 148,
+      "language": "Other",
+      "path": "ui/shared/unread-badge/package.json",
+      "sha256": "e3f4c008f256f9a0"
+    },
+    {
+      "bytes": 121,
+      "language": "Other",
+      "path": "ui/shared/unread-icon/package.json",
+      "sha256": "dace0027c5752fcc"
+    },
+    {
+      "bytes": 139,
+      "language": "Other",
+      "path": "ui/shared/upload-file/package.json",
+      "sha256": "208c92a0563e0641"
+    },
+    {
+      "bytes": 187,
+      "language": "Other",
+      "path": "ui/shared/upload-media-translations/package.json",
+      "sha256": "401f47c6459d8944"
+    },
+    {
+      "bytes": 152,
+      "language": "Other",
+      "path": "ui/shared/use-date-time-format-hook/package.json",
+      "sha256": "95fcde5d2c84ee39"
+    },
+    {
+      "bytes": 146,
+      "language": "Other",
+      "path": "ui/shared/use-fetch-api-hook/package.json",
+      "sha256": "b9cbbccafd015082"
+    },
+    {
+      "bytes": 146,
+      "language": "Other",
+      "path": "ui/shared/use-immediate-hook/package.json",
+      "sha256": "4e1be84018ece1ce"
+    },
+    {
+      "bytes": 164,
+      "language": "Other",
+      "path": "ui/shared/use-random-interval-hook/package.json",
+      "sha256": "b10148844b7e7ba1"
+    },
+    {
+      "bytes": 156,
+      "language": "Other",
+      "path": "ui/shared/use-state-with-callback-hook/package.json",
+      "sha256": "145ccb9692de12f2"
+    },
+    {
+      "bytes": 141,
+      "language": "Other",
+      "path": "ui/shared/user-settings/package.json",
+      "sha256": "3259c29048900062"
+    },
+    {
+      "bytes": 153,
+      "language": "Other",
+      "path": "ui/shared/user-sortable-name/package.json",
+      "sha256": "1772440f6257ba7d"
+    },
+    {
+      "bytes": 109,
+      "language": "Other",
+      "path": "ui/shared/users/package.json",
+      "sha256": "b2eeb091d17efd97"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/shared/util/package.json",
+      "sha256": "7e6ff92826320d5e"
+    },
+    {
+      "bytes": 108,
+      "language": "Other",
+      "path": "ui/shared/wiki/package.json",
+      "sha256": "890288f53062fa55"
+    }
+  ],
+  "schema_version": 1
+}

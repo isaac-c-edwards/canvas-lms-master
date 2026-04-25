@@ -1,0 +1,25 @@
+{
+  "estimation_method": "ceil(character_count / 4) for generated index text and selected excerpts",
+  "full_index_token_estimates": {
+    "key_files": 17910,
+    "manifest_summary": 494,
+    "symbols_jsonl_full_file": 5887839,
+    "symbols_jsonl_note": "Do not load the full symbols file. Filter it by path, language, or symbol name first."
+  },
+  "generated_at": "2026-04-25T21:34:52.542214+00:00",
+  "schema_version": 1,
+  "target_max_context_tokens": 51200,
+  "typical_pass": {
+    "estimated_context_percent": 39.38,
+    "estimated_tokens": {
+      "key_file_listing": 17910,
+      "manifest_summary": 494,
+      "selected_symbol_lookup": 6400,
+      "source_excerpt_allowance": 19200,
+      "working_notes_and_report": 6400
+    },
+    "estimated_total_tokens": 50404,
+    "under_40_percent_target": true
+  },
+  "usable_context_tokens": 128000
+}
