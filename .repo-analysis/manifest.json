@@ -126,6 +126,13 @@
         "Python": 1
       }
     },
+    "agents/tasks/feature-1": {
+      "bytes": 0,
+      "files": 1,
+      "languages": {
+        "Markdown": 1
+      }
+    },
     "app/controllers": {
       "bytes": 3514785,
       "files": 205,
@@ -34027,6 +34034,12 @@
       "language": "Python",
       "path": "agents/scripts/analyze_repo_index.py",
       "sha256": "3dec4fdb66859245"
+    },
+    {
+      "bytes": 0,
+      "language": "Markdown",
+      "path": "agents/tasks/feature-1/feature-1.md",
+      "sha256": "e3b0c44298fc1c14"
     },
     {
       "bytes": 1901,
@@ -168261,7 +168274,7 @@
       "sha256": "17c6bd980238ec45"
     }
   ],
-  "generated_at": "2026-04-25T21:34:52.542214+00:00",
+  "generated_at": "2026-05-01T17:03:14.197862+00:00",
   "ignore_patterns": [
     ".cache",
     ".git",
@@ -168283,13 +168296,13 @@
   "schema_version": 1,
   "totals": {
     "bytes": 464477045,
-    "files": 22478,
+    "files": 22479,
     "languages": {
       "CSS": 40,
       "HTML": 31,
       "JavaScript": 2557,
       "JavaScript React": 2024,
-      "Markdown": 173,
+      "Markdown": 174,
       "Other": 4695,
       "Python": 1,
       "Ruby": 6680,

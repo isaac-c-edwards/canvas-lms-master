@@ -6,7 +6,7 @@
     "symbols_jsonl_full_file": 5887839,
     "symbols_jsonl_note": "Do not load the full symbols file. Filter it by path, language, or symbol name first."
   },
-  "generated_at": "2026-04-25T21:34:52.542214+00:00",
+  "generated_at": "2026-05-01T17:03:14.197862+00:00",
   "schema_version": 1,
   "target_max_context_tokens": 51200,
   "typical_pass": {

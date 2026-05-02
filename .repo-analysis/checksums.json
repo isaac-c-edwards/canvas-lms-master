@@ -106,6 +106,7 @@
     "SECURITY.md": "829f8b9cefa48627",
     "agents/analyze-repo.md": "b9399f8a08b57e80",
     "agents/scripts/analyze_repo_index.py": "3dec4fdb66859245",
+    "agents/tasks/feature-1/feature-1.md": "e3b0c44298fc1c14",
     "app/controllers/accessibility/course_scan_controller.rb": "caef0d927f92818e",
     "app/controllers/accessibility/generate_controller.rb": "40e799bbbb45aa70",
     "app/controllers/accessibility/issue_summary_controller.rb": "aa6c178a33b85e19",
