@@ -79,6 +79,94 @@ http://<EC2_PUBLIC_IP>/login/canvas
 - Full `canvas:compile_assets` / Rspack reported 263 errors; dev mode relies on **webpack** container for JS
 - First page loads may be slow; not production-hardened
 
+## Troubleshooting
+
+Re-ground from this section after EC2 stop/start, `git pull`, or UI weirdness. Update **Last verified** when a fix works.
+
+### Missing config files (GitHub clone vs local fork)
+
+**Symptom:** Rails 500, e.g. `No such file or directory … config/browsers.yml` or missing `brandable_css.yml`.
+
+**Fix:** SCP from local dev machine (files often gitignored / not on GitHub):
+
+- `config/browsers.yml`
+- `config/brandable_css.yml`
+- `vendor/gems/bundler-multilock` (chmod `a+rX` on `vendor/` after Windows SCP)
+
+Then run `docker compose run --rm web yarn run build:css` if CSS index is missing.
+
+### `db:initial_setup` hangs or SSH times out
+
+**Symptom:** `rake db:initial_setup` runs forever with no output; or SSH exit 255.
+
+**Cause:** Task waits for **interactive** admin email/password prompts.
+
+**Fix:** Run non-interactively:
+
+```bash
+docker compose run --rm \
+  -e CANVAS_LMS_ADMIN_EMAIL=admin@example.com \
+  -e CANVAS_LMS_ADMIN_PASSWORD=password \
+  -e CANVAS_LMS_STATS_COLLECTION=opt_out \
+  -e CANVAS_LMS_ACCOUNT_NAME=Canvas \
+  web bundle exec rake db:initial_setup
+```
+
+### User Avatars checked in Admin but no profile picture UI
+
+**Symptom:** Admin **Features** shows **User Avatars** / **Enable Gravatar** checked, but `/profile` has no avatar circle or pencil does nothing.
+
+**Check DB (truth source):**
+
+```bash
+docker compose exec -T web bundle exec rails runner \
+  'puts Account.default.service_enabled?(:avatars)'
+```
+
+If `false`, enable and save:
+
+```bash
+docker compose exec -T web bundle exec rails runner \
+  'a=Account.default; a.enable_service(:avatars); a.settings[:enable_gravatar]=true; a.save!; puts a.service_enabled?(:avatars)'
+```
+
+Also click **Update Settings** at bottom of Admin → Settings after UI checkbox changes.
+
+### Profile pencil / avatar click does nothing
+
+**Symptom:** Avatar appears but clicking pencil or circle opens no modal.
+
+**Cause:** **`webpack` container not running** — profile JS (`AvatarModal`) is served by webpack in dev mode.
+
+**Check / fix:**
+
+```bash
+docker ps | grep webpack   # should be Up, not Exited
+cd ~/canvas-lms-master && docker compose up -d webpack web
+```
+
+Hard refresh `/profile` (Ctrl+F5). If still broken, check browser console for JS errors (Rspack compile errors on incomplete clone).
+
+**Workaround:** Set Gravatar at [gravatar.com](https://gravatar.com) for `admin@example.com`, or set avatar via Rails console.
+
+### Docker permission / volume issues after rebuild
+
+**Symptom:** `Gemfile.lock` or `/home/docker/.gem` permission denied; `vendor` not visible in container.
+
+**Fix:** Rebuild with matching UID: `docker compose build --build-arg USER_ID=1000 web jobs webpack`. If gem volumes were created as wrong user: `docker compose down -v` (destroys DB volumes—only if acceptable) then re-bootstrap.
+
+### Sync local lab docs to EC2
+
+```bash
+# local: git push
+cd ~/canvas-lms-master && git pull
+# if pull fails on agents/: chmod u+w agents && rm stale untracked files
+```
+
+### Public IP changed
+
+After stop/start without Elastic IP: `aws ec2 describe-instances --instance-ids <id>`, update browser URL and `config/domain.yml` (or re-run domain sed from setup script).
+
 ## Out of scope: feature implementation (next lab)
 
 - No scoped Canvas feature code in this lab
