@@ -45,6 +45,20 @@ yarn build:watch                     # Frontend dev mode
 - Access Rails console: `docker compose run --rm web rails c`
 - Database operations run inside containers
 
+## EC2 dev workflow (course fork)
+
+Canvas runs on **AWS EC2** for this fork; the **local clone** is where you edit and
+commit. Do not treat the EC2 copy as the only source of truth—sync with git.
+
+1. Edit locally in Cursor (including `agents/` docs).
+2. `git commit` and `git push` to the GitHub fork.
+3. On EC2: `cd ~/canvas-lms-master && git pull`.
+4. Restart services if needed: `docker compose restart web webpack` (or see runbook).
+
+Before infra or Docker work, re-ground from [`agents/aws-canvas-runbook.md`](agents/aws-canvas-runbook.md)
+(last verified, public IP, verification commands). Agent memory ritual:
+[`agents/memory-practice.md`](agents/memory-practice.md). Never commit AWS keys or `.pem` files.
+
 ## Testing Docs
 
 - JS testing guide: `doc/ui/testing_javascript.md`
