@@ -36,12 +36,9 @@ This pattern attaches to [`agents/analyze-repo.md`](analyze-repo.md). Before `an
 
 ## Evidence excerpt (no secrets)
 
-**User prompt (Cursor):** *“CAN U MAKE AN EC2?!?! … copy this whole repo on it … install Docker and get Canvas running”*
+**User prompt (Cursor):** *“CAN U MAKE AN EC2? … copy this whole repo on it … install Docker and get Canvas running”*
 
 **Agent actions (summarized):** Created EC2, cloned fork from GitHub, installed Docker/Compose/buildx, upgraded instance to `t3.large`, ran `docker compose` bootstrap, fixed missing `vendor/`, `brandable_css.yml`, `browsers.yml`, ran `yarn run build:css`, completed `db:initial_setup` with `CANVAS_LMS_ADMIN_EMAIL` / `CANVAS_LMS_ADMIN_PASSWORD` env vars.
 
 **Re-grounding example:** After `browsers.yml` 500 error, user pasted Rails trace; agent did not reuse earlier “Canvas is up” claim—it checked logs, copied missing config from local fork, ran `build:css`, re-verified `/login/canvas` → **200**.
 
-## Out of scope (this lab)
-
-Feature implementation for the scoped Canvas feature is **next lab** only. This file covers memory practice, not product code.
