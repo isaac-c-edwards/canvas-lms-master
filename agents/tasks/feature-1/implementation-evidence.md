@@ -90,13 +90,26 @@ GitHub MCP set issue #2 project item to **In progress** before implementation an
 
 ---
 
-## Slice #4 — What-if UI (in progress)
+## Slice #4 — What-if UI
 
 **Issue #4:** Frontend: What-if UI (React/TS, positive framing)  
-**Project item id:** `185630673`  
+**Also delivered:** #5 (unreachable UX), #6 (disclaimer) via same panel  
+**Project item ids:** `#4` `185630673`, `#5` `185630675`, `#6` `185630680`  
 **Branch:** `feature/4-what-if-required-grade-ui`
 
-**Status:** ⏸ Awaiting PR merge  
 **PR:** https://github.com/isaac-c-edwards/canvas-lms-master/pull/13
 
-**Includes:** Path to Your Goal panel on grade summary sidebar; covers #5 unreachable UX and #6 disclaimer via API response.
+**Status:** ✅ **Merged**
+
+- [x] PR opened
+- [x] PR merged to `main`
+- [x] Issues #4, #5, #6 → **Done** on project board (2026-05-19)
+
+**Merge commit:** https://github.com/isaac-c-edwards/canvas-lms-master/commit/a7304d7dcbec394b9a7ddec372c86db34d31e7b7
+
+**Post-merge fixes:** distinct a11y labels; AbortController cancels stale API calls on slider change.
+
+## Verification performed (#4)
+
+- [ ] `yarn test ui/features/what_if_required_grade/react/__tests__/WhatIfRequiredGradePanel.test.tsx`
+- [ ] Manual: student Grades sidebar → Path to Your Goal panel
