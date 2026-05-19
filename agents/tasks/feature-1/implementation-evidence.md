@@ -56,3 +56,15 @@ aligned with the project issue #2 and test issue #8.
 
 GitHub MCP set issue #2 project item to **In progress** before implementation and
 **Done** after PR #11 merge (2026-05-19).
+
+---
+
+## Slice #3 — Student read-only API (in progress)
+
+**Issue #3:** Backend: Student-facing read-only API for what-if result  
+**Project item id:** `185630670`  
+**Branch:** `feature/3-what-if-required-grade-api`
+
+**Endpoint:** `GET /api/v1/courses/:course_id/what_if/required_grade?target_percent=`
+
+**Status:** ⏸ Awaiting PR merge
