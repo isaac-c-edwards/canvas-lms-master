@@ -16,7 +16,7 @@
 
 ## Pull request
 
-**PR:** _pending — fill after merge request created_
+**PR:** https://github.com/isaac-c-edwards/canvas-lms-master/pull/11
 
 **Branch:** `feature/2-what-if-calculator-engine`
 
@@ -31,7 +31,7 @@
 
 **Status:** ⏸ **PAUSED — awaiting human review and merge**
 
-- [ ] PR opened
+- [x] PR opened
 - [ ] PR merged to `main`
 - [ ] Merge commit URL recorded below
 
