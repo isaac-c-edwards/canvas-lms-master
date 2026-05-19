@@ -68,6 +68,28 @@ describe WhatIfRequiredGradeCalculator do
       expect(result.status).to eq :already_met
       expect(result.required_uniform_percent).to eq 0.0
     end
+
+    it "returns unreachable when no remaining points and target is not met" do
+      result = described_class.for_points(
+        graded_score: 700,
+        graded_possible: 1000,
+        remaining_possible: 0,
+        target_percent: 90
+      )
+
+      expect(result).to be_unreachable
+    end
+
+    it "returns unreachable for invalid target percent" do
+      result = described_class.for_points(
+        graded_score: 800,
+        graded_possible: 1000,
+        remaining_possible: 200,
+        target_percent: 105
+      )
+
+      expect(result).to be_unreachable
+    end
   end
 
   describe ".for_weighted_groups" do
@@ -79,12 +101,18 @@ describe WhatIfRequiredGradeCalculator do
     end
 
     it "returns uniform required percent for weighted courses" do
-      result = described_class.for_weighted_groups(groups:, target_percent: 85)
+      # Current weighted ~63.33%; target 70% is reachable (~36.36% on remainder)
+      result = described_class.for_weighted_groups(groups:, target_percent: 70)
 
       expect(result).to be_success
-      expect(result.required_uniform_percent).to be_a(Float)
-      expect(result.required_uniform_percent).to be > 0
-      expect(result.required_uniform_percent).to be <= 100
+      expect(result.required_uniform_percent).to be 36.36
+    end
+
+    it "returns unreachable when weighted target exceeds 100% uniform remainder" do
+      result = described_class.for_weighted_groups(groups:, target_percent: 85)
+
+      expect(result).to be_unreachable
+      expect(result.required_uniform_percent).to be_nil
     end
 
     it "matches points-based math when a single group carries full weight" do
