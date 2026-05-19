@@ -4,7 +4,7 @@
 * **Calculation Strategy:** To solve the "infinite combinations" problem of achieving a target grade, the tool uses a **uniform percentage strategy**. It calculates the single baseline percentage required across all remaining work, rather than suggesting varying scores.
 * **Data Boundaries:** The feature must interact heavily with the `Course`, `AssignmentGroup` (for weights), and `Submission` concepts in Canvas. It must pull the student's current grades and the total possible points/weights for future assignments via the backend Rails controllers.
 * **UX Risks:** Grade anxiety is a primary concern. To mitigate this, the UI will use positive framing ("Path to your goal") rather than absolute verdicts. Furthermore, if a target grade is mathematically impossible (e.g., requiring a 105%), the UI will gracefully handle the edge case by informing the user the goal is out of reach, preventing nonsensical data.
-* **Project Tracking (Lab 4 Prep):** We will track milestones for: 
+* **Project tracking:** Milestones on the GitHub Project: 
     1. Grade calculation logic implementation (Ruby backend).
     2. Frontend UI input/slider state management (React/TS).
     3. Edge-case handling for weighted groups.
@@ -22,7 +22,7 @@
 * **Performance:** Grade calculations should execute in <500ms to ensure the React UI feels responsive during real-time "What-if" slider/input adjustments.
 * **Accessibility:** The input field and result display must follow WCAG 2.1 standards, ensuring full compatibility with screen readers for students relying on assistive technologies.
 
-## 4. Codebase Analysis (via Lab 2 Agent)
+## 4. Codebase Analysis
 **Instructions for using the analyze-repo agent:**
 1. Ensure the Python environment is active on the EC2 instance.
 2. Navigate to the root of the `canvas-lms` repository fork.

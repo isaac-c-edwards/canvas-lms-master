@@ -16,7 +16,7 @@ code changes, tests, and PRs with board traceability.
 - Direct push to `main` (use feature branches + PR)
 - Upstream merge to `instructure/canvas-lms`
 
-## Inputs (Lab 2.1 + 2.2)
+## Inputs
 
 | Artifact | Path / URL |
 |----------|------------|
@@ -26,8 +26,9 @@ code changes, tests, and PRs with board traceability.
 | Brownfield analysis | `agents/analyze-repo.md`, `.repo-analysis/` |
 | EC2 / Docker runbook | `agents/aws-canvas-runbook.md` |
 | Memory / re-grounding | `agents/memory-practice.md` |
+| Implementation evidence log | `agents/tasks/feature-1/implementation-evidence.md` |
 
-**GitHub Project (user):**
+**GitHub Project:**
 
 - Owner: `isaac-c-edwards`
 - Project number: **1** (title: `@isaac-c-edwards's test project`)
@@ -79,11 +80,9 @@ status in `implementation-evidence.md`.
 2. **Re-ground** — Read research FR/NFR + issue body; read `AGENTS.md` EC2 workflow.
 3. **Branch** — `feature/<issue#>-short-slug` from `main`.
 4. **Implement** — Agent writes code/tests; human reviews diff.
-5. **Verify** (minimum for backend slice):
-   - `bin/rspec spec/lib/what_if_required_grade_calculator_spec.rb` (in Docker web container)
-   - Optional: `yarn lint` / `bin/rubocop` on touched files
+5. **Verify** — Run checks for the slice type (see table below).
 6. **Commit / push** — Conventional Canvas commit message; push branch.
-7. **Open PR** — Link issue in body (`refs #2`); describe plan trace.
+7. **Open PR** — Link issue in body (`refs #N`); describe plan trace.
 
 **Branch naming:** `feature/<issue#>-short-slug` (examples: `feature/2-what-if-calculator-engine`, `feature/14-path-to-goal-polish`)
 
@@ -140,10 +139,8 @@ timestamp.
 | API (#3) | Controller/request spec + permission check |
 | Frontend (#4–6) | Vitest + manual student view on EC2 |
 | Tests / polish (#8–9) | Extend RSpec/Vitest; record in evidence file |
-| Manual (#10) | Spreadsheet comparison notes / screenshot on EC2 demo course |
+| Manual (#10) | Spreadsheet comparison notes on demo course |
 | Post-merge | `git pull` on EC2; smoke test grades page; log in evidence |
-
-**Delivered slices (Feature 1):** #2 → PR #11, #3 → PR #12, #4–#6 → PR #13, #8–#10 → PR #14. Evidence: `agents/tasks/feature-1/implementation-evidence.md`.
 
 ## Failure modes
 

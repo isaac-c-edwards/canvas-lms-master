@@ -4,7 +4,7 @@
 
 Canvas LMS is a large brownfield fork with Docker, Ruby, and frontend build steps that drift quickly after upstream pulls or partial clones. A **last-verified timestamp** on agent-facing notes plus an **explicit re-grounding trigger** after environment changes keeps agents from trusting stale setup advice (wrong IPs, missing config files, outdated compose steps).
 
-## Connection to Lab 2 agent
+## Connection to analyze-repo agent
 
 This pattern attaches to [`agents/analyze-repo.md`](analyze-repo.md). Before `analyze-repo` runs a bounded pass, I check whether `.repo-analysis/manifest.json` and this file’s **Last verified** block are current. If infra or clone state changed since last verification, I re-run targeted commands (or ask the agent to) instead of relying on prior chat memory.
 
