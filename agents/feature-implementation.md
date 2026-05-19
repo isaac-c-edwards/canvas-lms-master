@@ -85,16 +85,16 @@ status in `implementation-evidence.md`.
 6. **Commit / push** — Conventional Canvas commit message; push branch.
 7. **Open PR** — Link issue in body (`refs #2`); describe plan trace.
 
-**Branch naming:** `feature/2-what-if-calculator-engine`
+**Branch naming:** `feature/<issue#>-short-slug` (examples: `feature/2-what-if-calculator-engine`, `feature/14-path-to-goal-polish`)
 
-**PR title:** `[Feature 1] What-if required grade calculator (issue #2)`
+**PR title:** `[Feature 1] <short description> (issue #N)`
 
 **PR body must include:**
 
-- Summary + plan trace (FR1–FR3)
-- `refs #2` (and `#8` if tests included)
+- Summary + plan trace (map to FR/NFR from research)
+- `refs #N` (and related issues, e.g. `#8` for tests)
 - Test plan checklist
-- Out of scope note (drop-lowest, API, UI)
+- Out-of-scope note when relevant (drop-lowest, etc.)
 
 ## PR and merge gates
 
@@ -136,10 +136,14 @@ timestamp.
 
 | Slice | Required checks |
 |-------|-----------------|
-| Backend calculator | RSpec unit tests; no DB writes in calculator |
+| Backend calculator (#2) | RSpec unit tests; no DB writes in calculator |
 | API (#3) | Controller/request spec + permission check |
 | Frontend (#4–6) | Vitest + manual student view on EC2 |
-| Manual (#10) | Spreadsheet comparison notes / screenshot |
+| Tests / polish (#8–9) | Extend RSpec/Vitest; record in evidence file |
+| Manual (#10) | Spreadsheet comparison notes / screenshot on EC2 demo course |
+| Post-merge | `git pull` on EC2; smoke test grades page; log in evidence |
+
+**Delivered slices (Feature 1):** #2 → PR #11, #3 → PR #12, #4–#6 → PR #13, #8–#10 → PR #14. Evidence: `agents/tasks/feature-1/implementation-evidence.md`.
 
 ## Failure modes
 
