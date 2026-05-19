@@ -96,6 +96,7 @@ GitHub MCP set issue #2 project item to **In progress** before implementation an
 **Project item id:** `185630673`  
 **Branch:** `feature/4-what-if-required-grade-ui`
 
-**Status:** ⏸ Awaiting PR merge
+**Status:** ⏸ Awaiting PR merge  
+**PR:** https://github.com/isaac-c-edwards/canvas-lms-master/pull/13
 
 **Includes:** Path to Your Goal panel on grade summary sidebar; covers #5 unreachable UX and #6 disclaimer via API response.
