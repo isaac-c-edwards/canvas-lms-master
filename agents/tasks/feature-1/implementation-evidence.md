@@ -67,4 +67,5 @@ GitHub MCP set issue #2 project item to **In progress** before implementation an
 
 **Endpoint:** `GET /api/v1/courses/:course_id/what_if/required_grade?target_percent=`
 
-**Status:** ⏸ Awaiting PR merge
+**Status:** ⏸ Awaiting PR merge  
+**PR:** https://github.com/isaac-c-edwards/canvas-lms-master/pull/12
