@@ -48,6 +48,14 @@ describe WhatIf::RequiredGradeService do
       expect(result[:required_uniform_percent]).to be 80.0
       expect(result[:weighted]).to be false
       expect(result[:current_percent]).to be 64.0
+      expect(result[:estimated_assignments]).to eq [
+        {
+          assignment_id: a2.id,
+          title: "Remaining",
+          points_possible: 20.0,
+          estimated_points: 16.0
+        }
+      ]
     end
 
     it "returns unreachable status when target cannot be met" do
@@ -69,6 +77,7 @@ describe WhatIf::RequiredGradeService do
 
       expect(result[:status]).to eq "unreachable"
       expect(result[:required_uniform_percent]).to be_nil
+      expect(result[:estimated_assignments]).to eq []
       expect(result[:message]).to eq "Target unreachable with remaining assignments"
     end
   end

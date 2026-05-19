@@ -83,13 +83,13 @@ class GradebooksController < ApplicationController
     end
 
     js_bundle :grade_summary, :rubric_assessment
+    css_bundle :grade_summary
+
+    load_grade_summary_data
     if @presenter.editable? && !@exclude_total && !@context.hide_final_grades? &&
        !@context.restrict_quantitative_data?(@current_user)
       js_bundle :what_if_required_grade
     end
-    css_bundle :grade_summary
-
-    load_grade_summary_data
     render stream: can_stream_template?
   end
 

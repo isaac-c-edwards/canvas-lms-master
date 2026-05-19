@@ -52,6 +52,7 @@ import {scoreToPercentage, scoreToScaledPoints} from '@canvas/grading/GradeCalcu
 import useStore from '../react/stores'
 import replaceTags from '@canvas/util/replaceTags'
 import {ZUseCourseAssignmentsAssetReportsParams} from '@canvas/lti-asset-processor/react/hooks/useCourseAssignmentsAssetReports'
+import {bindPathToGoalEstimates} from './pathToGoalEstimates'
 
 const I18n = createI18nScope('gradingGradeSummary')
 
@@ -1064,6 +1065,7 @@ function setup() {
       .triggerHandler('change')
 
     bindShowAllDetailsButton($ariaAnnouncer)
+    bindPathToGoalEstimates(GradeSummary)
     StatusPill.renderPills(ENV.custom_grade_statuses)
   })
 }
