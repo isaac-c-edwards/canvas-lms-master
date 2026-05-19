@@ -87,3 +87,16 @@ GitHub MCP set issue #2 project item to **In progress** before implementation an
 
 - [ ] `bin/rspec spec/services/what_if/required_grade_service_spec.rb`
 - [ ] `bin/rspec spec/controllers/what_if_required_grades_api_controller_spec.rb`
+
+---
+
+## Slice #4 — What-if UI (in progress)
+
+**Issue #4:** Frontend: What-if UI (React/TS, positive framing)  
+**Project item id:** `185630673`  
+**Branch:** `feature/4-what-if-required-grade-ui`
+
+**Status:** ⏸ Awaiting PR merge  
+**PR:** https://github.com/isaac-c-edwards/canvas-lms-master/pull/13
+
+**Includes:** Path to Your Goal panel on grade summary sidebar; covers #5 unreachable UX and #6 disclaimer via API response.
