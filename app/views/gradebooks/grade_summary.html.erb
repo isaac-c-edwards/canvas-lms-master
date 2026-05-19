@@ -81,6 +81,9 @@
         <div id="whatif-score-description">
           <%= whatif_instructions %>
         </div>
+        <% if !@exclude_total && !@context.hide_final_grades? %>
+          <div id="what-if-required-grade-mount"></div>
+        <% end %>
       <% end %>
     </div>
   <% end %>
