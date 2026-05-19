@@ -59,7 +59,7 @@ GitHub MCP set issue #2 project item to **In progress** before implementation an
 
 ---
 
-## Slice #3 — Student read-only API (in progress)
+## Slice #3 — Student read-only API
 
 **Issue #3:** Backend: Student-facing read-only API for what-if result  
 **Project item id:** `185630670`  
@@ -67,5 +67,23 @@ GitHub MCP set issue #2 project item to **In progress** before implementation an
 
 **Endpoint:** `GET /api/v1/courses/:course_id/what_if/required_grade?target_percent=`
 
-**Status:** ⏸ Awaiting PR merge  
 **PR:** https://github.com/isaac-c-edwards/canvas-lms-master/pull/12
+
+**Status:** ✅ **Merged**
+
+- [x] PR opened
+- [x] PR merged to `main`
+- [x] Issue #3 → **Done** on project board (2026-05-19)
+
+**Merge commit:** https://github.com/isaac-c-edwards/canvas-lms-master/commit/85aaba48050c959fe5790568f5a53e4c9190b7f7
+
+**What changed:**
+
+- `WhatIfRequiredGradesApiController` + `WhatIf::RequiredGradeService`
+- Student session auth (`read_grades`, `hide_final_grades` guard)
+- Service/controller RSpec coverage
+
+## Verification performed (#3)
+
+- [ ] `bin/rspec spec/services/what_if/required_grade_service_spec.rb`
+- [ ] `bin/rspec spec/controllers/what_if_required_grades_api_controller_spec.rb`
