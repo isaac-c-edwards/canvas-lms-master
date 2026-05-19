@@ -3019,6 +3019,10 @@ CanvasRails::Application.routes.draw do
       put "courses/:course_id/what_if_grades/reset", action: :reset_for_student_course
     end
 
+    scope(controller: :what_if_required_grades_api) do
+      get "courses/:course_id/what_if/required_grade", action: :show
+    end
+
     scope(controller: :plugins) do
       put "plugins/:id", action: :update
       get "plugins/:id", action: :show
