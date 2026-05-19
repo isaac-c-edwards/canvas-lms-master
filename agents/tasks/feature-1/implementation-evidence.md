@@ -12,7 +12,7 @@
 | When | Item | Status |
 |------|------|--------|
 | 2026-05-19 | #2 Backend calculation engine | Todo → **In progress** (MCP `projects_write`, option `47fc9ee4`) |
-| _pending merge_ | #2 | **In progress** → **Done** (`98236657`) after PR merge |
+| 2026-05-19 | #2 Backend calculation engine | **In progress** → **Done** (`98236657`) after PR #11 merge |
 
 ## Pull request
 
@@ -29,13 +29,13 @@
 
 ## Merge evidence
 
-**Status:** ⏸ **PAUSED — awaiting human review and merge**
+**Status:** ✅ **Merged**
 
 - [x] PR opened
-- [ ] PR merged to `main`
-- [ ] Merge commit URL recorded below
+- [x] PR merged to `main`
+- [x] Merge commit recorded below
 
-_Merge URL:_ (fill after merge)
+**Merge commit:** https://github.com/isaac-c-edwards/canvas-lms-master/commit/8977646c62fb7a5085f56ff12595e9c2e57a2141
 
 ## Plan trace
 
@@ -54,5 +54,5 @@ aligned with the project issue #2 and test issue #8.
 
 ## MCP notes
 
-GitHub MCP used to set issue #2 project item to **In progress** before implementation.
-**Done** will be set via MCP after merge (see `agents/feature-implementation.md`).
+GitHub MCP set issue #2 project item to **In progress** before implementation and
+**Done** after PR #11 merge (2026-05-19).
