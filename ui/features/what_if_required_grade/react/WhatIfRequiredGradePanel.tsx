@@ -52,34 +52,39 @@ function WhatIfRequiredGradePanel({courseId}: WhatIfRequiredGradePanelProps) {
   const [error, setError] = useState<string | null>(null)
 
   const fetchRequiredGrade = useCallback(
-    async (target: number) => {
+    async (target: number, signal: AbortSignal) => {
       setLoading(true)
       setError(null)
 
       try {
         const {data} = await axios.get<RequiredGradeResponse>(
           `/api/v1/courses/${courseId}/what_if/required_grade`,
-          {params: {target_percent: target}},
+          {params: {target_percent: target}, signal},
         )
         setResult(data)
       } catch (e) {
+        if (signal.aborted || axios.isCancel(e)) return
         setResult(null)
         setError(I18n.t('Unable to calculate your path to this goal. Please try again.'))
       } finally {
-        setLoading(false)
+        if (!signal.aborted) setLoading(false)
       }
     },
     [courseId],
   )
 
   useEffect(() => {
+    const controller = new AbortController()
     const timer = window.setTimeout(() => {
       if (targetPercent >= 0 && targetPercent <= 100) {
-        fetchRequiredGrade(targetPercent)
+        fetchRequiredGrade(targetPercent, controller.signal)
       }
     }, 400)
 
-    return () => window.clearTimeout(timer)
+    return () => {
+      window.clearTimeout(timer)
+      controller.abort()
+    }
   }, [targetPercent, fetchRequiredGrade])
 
   const handleTargetChange = (_event: React.SyntheticEvent, value: number) => {
@@ -128,7 +133,7 @@ function WhatIfRequiredGradePanel({courseId}: WhatIfRequiredGradePanelProps) {
       />
 
       <NumberInput
-        renderLabel={I18n.t('Target grade (%)')}
+        renderLabel={I18n.t('Target grade precise value (%)')}
         displayInt={true}
         min={0}
         max={100}
