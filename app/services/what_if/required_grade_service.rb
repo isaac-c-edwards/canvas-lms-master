@@ -33,7 +33,7 @@ module WhatIf
     end
 
     def call
-      aggregates = aggregate_totals
+      aggregates = aggregate_totals(include_remaining_assignments: true)
       result = if aggregates[:weighted]
                  WhatIfRequiredGradeCalculator.for_weighted_groups(
                    groups: aggregates[:groups],
@@ -51,30 +51,39 @@ module WhatIf
 
     private
 
-    def aggregate_totals
+    def aggregate_totals(include_remaining_assignments: false)
       assignments = visible_point_assignments.to_a
       submissions = submissions_for(assignments)
       assignment_groups = @course.assignment_groups.active.index_by(&:id)
+      remaining_assignments = []
 
       if @course.apply_group_weights?
         groups = Hash.new { |hash, key| hash[key] = empty_group_bucket(assignment_groups[key]) }
 
         assignments.each do |assignment|
-          bucket = point_bucket(submissions[assignment.id], assignment)
+          submission = submissions[assignment.id]
+          bucket = point_bucket(submission, assignment)
           group_bucket = groups[assignment.assignment_group_id]
           merge_bucket!(group_bucket, bucket)
+          if include_remaining_assignments && remaining_assignment?(submission, assignment)
+            remaining_assignments << remaining_assignment_entry(assignment)
+          end
         end
 
-        { weighted: true, groups: groups.values, points: nil }
+        { weighted: true, groups: groups.values, points: nil, remaining_assignments: }
       else
         totals = { graded_score: 0.to_d, graded_possible: 0.to_d, remaining_possible: 0.to_d }
 
         assignments.each do |assignment|
-          bucket = point_bucket(submissions[assignment.id], assignment)
+          submission = submissions[assignment.id]
+          bucket = point_bucket(submission, assignment)
           merge_bucket!(totals, bucket)
+          if include_remaining_assignments && remaining_assignment?(submission, assignment)
+            remaining_assignments << remaining_assignment_entry(assignment)
+          end
         end
 
-        { weighted: false, groups: nil, points: totals }
+        { weighted: false, groups: nil, points: totals, remaining_assignments: }
       end
     end
 
@@ -133,6 +142,35 @@ module WhatIf
       assignment.post_manually? ? submission.posted? : true
     end
 
+    def remaining_assignment?(submission, assignment)
+      possible = assignment.points_possible.to_d
+      return false if possible <= 0
+
+      !graded_for_student?(submission, assignment)
+    end
+
+    def remaining_assignment_entry(assignment)
+      {
+        assignment_id: assignment.id,
+        title: assignment.title,
+        points_possible: assignment.points_possible.to_f
+      }
+    end
+
+    def build_estimated_assignments(result, remaining_assignments)
+      return [] unless result.success? && result.required_uniform_percent
+
+      percent = result.required_uniform_percent.to_d / 100
+      remaining_assignments.filter_map do |assignment|
+        possible = assignment[:points_possible].to_d
+        next if possible <= 0
+
+        assignment.merge(
+          estimated_points: (possible * percent).round(2).to_f
+        )
+      end
+    end
+
     def build_response(result, target_percent, aggregates)
       current_percent = current_percent_from(aggregates)
 
@@ -142,6 +180,7 @@ module WhatIf
         required_uniform_percent: result.required_uniform_percent,
         current_percent:,
         weighted: aggregates[:weighted],
+        estimated_assignments: build_estimated_assignments(result, aggregates[:remaining_assignments]),
         disclaimer: DROP_RULES_DISCLAIMER,
         message: response_message(result.status)
       }

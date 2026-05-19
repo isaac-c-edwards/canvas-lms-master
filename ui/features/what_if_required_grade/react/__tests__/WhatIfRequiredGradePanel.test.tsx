@@ -20,6 +20,7 @@ import React from 'react'
 import {render, waitFor} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import axios from '@canvas/axios'
+import {dispatchPathToGoalEstimates} from '../../../grade_summary/jquery/pathToGoalEstimates'
 import WhatIfRequiredGradePanel from '../WhatIfRequiredGradePanel'
 
 vi.mock('@canvas/axios', () => ({
@@ -28,7 +29,12 @@ vi.mock('@canvas/axios', () => ({
   },
 }))
 
+vi.mock('../../../grade_summary/jquery/pathToGoalEstimates', () => ({
+  dispatchPathToGoalEstimates: vi.fn(),
+}))
+
 const mockedGet = vi.mocked(axios.get)
+const mockedDispatch = vi.mocked(dispatchPathToGoalEstimates)
 
 describe('WhatIfRequiredGradePanel', () => {
   beforeEach(() => {
@@ -41,6 +47,14 @@ describe('WhatIfRequiredGradePanel', () => {
         weighted: false,
         disclaimer: 'Drop lowest rules are not included in this calculation.',
         message: null,
+        estimated_assignments: [
+          {
+            assignment_id: 99,
+            title: 'Final Exam',
+            points_possible: 200,
+            estimated_points: 150,
+          },
+        ],
       },
     })
   })
@@ -49,12 +63,24 @@ describe('WhatIfRequiredGradePanel', () => {
     vi.clearAllMocks()
   })
 
-  it('shows success path messaging after API response', async () => {
-    const {getByTestId, findByTestId} = render(
+  it('does not fetch or show controls until the student opens the tool', async () => {
+    const {getByTestId, queryByTestId} = render(
       <WhatIfRequiredGradePanel courseId="42" />,
     )
 
     expect(getByTestId('what-if-required-grade-panel')).toBeInTheDocument()
+    expect(queryByTestId('what-if-target-slider')).not.toBeInTheDocument()
+    expect(mockedGet).not.toHaveBeenCalled()
+    expect(mockedDispatch).not.toHaveBeenCalled()
+  })
+
+  it('shows success path messaging after the student opens the tool', async () => {
+    const user = userEvent.setup()
+    const {getByTestId, findByTestId} = render(
+      <WhatIfRequiredGradePanel courseId="42" />,
+    )
+
+    await user.click(getByTestId('what-if-tool-toggle'))
 
     await waitFor(() => {
       expect(mockedGet).toHaveBeenCalledWith(
@@ -84,14 +110,32 @@ describe('WhatIfRequiredGradePanel', () => {
       <WhatIfRequiredGradePanel courseId="42" />,
     )
 
-    const input = getByTestId('what-if-target-input').querySelector('input')
-    if (!input) throw new Error('target input not found')
+    await user.click(getByTestId('what-if-tool-toggle'))
 
-    await user.clear(input)
-    await user.type(input, '95')
+    const input = await findByTestId('what-if-target-input')
+    const inputEl = input.querySelector('input')
+    if (!inputEl) throw new Error('target input not found')
+
+    await user.clear(inputEl)
+    await user.type(inputEl, '95')
 
     expect(await findByTestId('what-if-unreachable-alert')).toHaveTextContent(
       'Target unreachable with remaining assignments',
     )
+  })
+
+  it('clears table estimates when the student closes the tool', async () => {
+    const user = userEvent.setup()
+    const {getByTestId, findByTestId} = render(
+      <WhatIfRequiredGradePanel courseId="42" />,
+    )
+
+    await user.click(getByTestId('what-if-tool-toggle'))
+    await findByTestId('what-if-success-alert')
+
+    mockedDispatch.mockClear()
+    await user.click(getByTestId('what-if-tool-toggle'))
+
+    expect(mockedDispatch).toHaveBeenCalledWith([])
   })
 })

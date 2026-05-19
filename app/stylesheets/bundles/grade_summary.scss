@@ -413,6 +413,11 @@ a.screenreader-toggle {
   box-sizing: border-box;
 }
 
+.student_assignment .grade .what-if-path-estimate {
+  color: $ic-font-color--subdued;
+  font-style: italic;
+}
+
 div.rubric-toggle {
   padding-bottom: 5px;
 }
