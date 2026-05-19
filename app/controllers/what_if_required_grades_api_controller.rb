@@ -74,6 +74,7 @@ class WhatIfRequiredGradesApiController < ApplicationController
     course = @domain_root_account.all_courses.active.find(params[:course_id])
     enrollment = course.student_enrollments.active.find_by(user_id: @current_user.id)
     return render_unauthorized_action unless enrollment&.grants_right?(@current_user, :read_grades)
+    return render_unauthorized_action if course.hide_final_grades?
 
     target_percent = parse_target_percent(params[:target_percent])
     unless target_percent

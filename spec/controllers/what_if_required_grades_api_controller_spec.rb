@@ -69,5 +69,14 @@ describe WhatIfRequiredGradesApiController do
 
       expect(response).to be_unauthorized
     end
+
+    it "denies when course hides final grades" do
+      @course.settings = @course.settings.merge(hide_final_grades: true)
+      @course.save!
+
+      get :show, params: { course_id: @course.id, target_percent: 80 }, format: :json
+
+      expect(response).to be_unauthorized
+    end
   end
 end
