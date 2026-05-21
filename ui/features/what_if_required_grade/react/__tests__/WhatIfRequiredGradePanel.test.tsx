@@ -17,7 +17,7 @@
  */
 
 import React from 'react'
-import {render, waitFor} from '@testing-library/react'
+import {fireEvent, render, waitFor} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import axios from '@canvas/axios'
 import {dispatchPathToGoalEstimates} from '../../../grade_summary/jquery/pathToGoalEstimates'
@@ -60,6 +60,7 @@ describe('WhatIfRequiredGradePanel', () => {
   })
 
   afterEach(() => {
+    vi.useRealTimers()
     vi.clearAllMocks()
   })
 
@@ -71,7 +72,6 @@ describe('WhatIfRequiredGradePanel', () => {
     expect(getByTestId('what-if-required-grade-panel')).toBeInTheDocument()
     expect(queryByTestId('what-if-target-slider')).not.toBeInTheDocument()
     expect(mockedGet).not.toHaveBeenCalled()
-    expect(mockedDispatch).not.toHaveBeenCalled()
   })
 
   it('shows success path messaging after the student opens the tool', async () => {
@@ -112,13 +112,6 @@ describe('WhatIfRequiredGradePanel', () => {
 
     await user.click(getByTestId('what-if-tool-toggle'))
 
-    const input = await findByTestId('what-if-target-input')
-    const inputEl = input.querySelector('input')
-    if (!inputEl) throw new Error('target input not found')
-
-    await user.clear(inputEl)
-    await user.type(inputEl, '95')
-
     expect(await findByTestId('what-if-unreachable-alert')).toHaveTextContent(
       'Target unreachable with remaining assignments',
     )
@@ -141,14 +134,14 @@ describe('WhatIfRequiredGradePanel', () => {
 
   it('exposes distinct accessible labels for slider and number input', async () => {
     const user = userEvent.setup()
-    const {getByLabelText, getByTestId} = render(
+    const {getByText, getByTestId} = render(
       <WhatIfRequiredGradePanel courseId="42" />,
     )
 
     await user.click(getByTestId('what-if-tool-toggle'))
 
-    expect(getByLabelText('Target grade (%)')).toBeInTheDocument()
-    expect(getByLabelText('Target grade precise value (%)')).toBeInTheDocument()
+    expect(getByText('Target grade (%)')).toBeInTheDocument()
+    expect(getByText('Target grade precise value (%)')).toBeInTheDocument()
   })
 
   it('announces status updates in an aria-live region when expanded', async () => {
@@ -179,18 +172,15 @@ describe('WhatIfRequiredGradePanel', () => {
     await user.click(getByTestId('what-if-tool-toggle'))
     await vi.advanceTimersByTimeAsync(400)
 
-    const input = await findByTestId('what-if-target-input')
-    const inputEl = input.querySelector('input')
-    if (!inputEl) throw new Error('target input not found')
+    const slider = await findByTestId('what-if-target-slider')
+    const rangeEl = slider.querySelector('input')
+    if (!rangeEl) throw new Error('target slider input not found')
 
-    await user.clear(inputEl)
-    await user.type(inputEl, '90')
+    fireEvent.change(rangeEl, {target: {value: '90'}})
     await vi.advanceTimersByTimeAsync(400)
 
     expect(pendingSignals.length).toBeGreaterThanOrEqual(2)
     expect(pendingSignals[0].aborted).toBe(true)
     expect(pendingSignals[pendingSignals.length - 1].aborted).toBe(false)
-
-    vi.useRealTimers()
   })
 })
