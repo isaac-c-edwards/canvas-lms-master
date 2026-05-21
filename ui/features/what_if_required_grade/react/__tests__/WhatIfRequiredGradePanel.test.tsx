@@ -138,4 +138,59 @@ describe('WhatIfRequiredGradePanel', () => {
 
     expect(mockedDispatch).toHaveBeenCalledWith([])
   })
+
+  it('exposes distinct accessible labels for slider and number input', async () => {
+    const user = userEvent.setup()
+    const {getByLabelText, getByTestId} = render(
+      <WhatIfRequiredGradePanel courseId="42" />,
+    )
+
+    await user.click(getByTestId('what-if-tool-toggle'))
+
+    expect(getByLabelText('Target grade (%)')).toBeInTheDocument()
+    expect(getByLabelText('Target grade precise value (%)')).toBeInTheDocument()
+  })
+
+  it('announces status updates in an aria-live region when expanded', async () => {
+    const user = userEvent.setup()
+    const {container, getByTestId} = render(<WhatIfRequiredGradePanel courseId="42" />)
+
+    await user.click(getByTestId('what-if-tool-toggle'))
+
+    const liveRegion = container.querySelector('[aria-live="polite"]')
+    expect(liveRegion).toBeInTheDocument()
+    expect(liveRegion).toHaveAttribute('aria-atomic', 'true')
+  })
+
+  it('aborts the previous in-flight request when the target changes', async () => {
+    vi.useFakeTimers()
+
+    const pendingSignals: AbortSignal[] = []
+    mockedGet.mockImplementation((_url, config) => {
+      if (config?.signal) pendingSignals.push(config.signal)
+      return new Promise(() => {})
+    })
+
+    const user = userEvent.setup({advanceTimers: vi.advanceTimersByTime})
+    const {getByTestId, findByTestId} = render(
+      <WhatIfRequiredGradePanel courseId="42" />,
+    )
+
+    await user.click(getByTestId('what-if-tool-toggle'))
+    await vi.advanceTimersByTimeAsync(400)
+
+    const input = await findByTestId('what-if-target-input')
+    const inputEl = input.querySelector('input')
+    if (!inputEl) throw new Error('target input not found')
+
+    await user.clear(inputEl)
+    await user.type(inputEl, '90')
+    await vi.advanceTimersByTimeAsync(400)
+
+    expect(pendingSignals.length).toBeGreaterThanOrEqual(2)
+    expect(pendingSignals[0].aborted).toBe(true)
+    expect(pendingSignals[pendingSignals.length - 1].aborted).toBe(false)
+
+    vi.useRealTimers()
+  })
 })
