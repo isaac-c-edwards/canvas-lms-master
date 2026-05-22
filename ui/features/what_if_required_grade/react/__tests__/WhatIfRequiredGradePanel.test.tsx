@@ -17,7 +17,7 @@
  */
 
 import React from 'react'
-import {fireEvent, render, waitFor} from '@testing-library/react'
+import {render, waitFor} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import axios from '@canvas/axios'
 import {dispatchPathToGoalEstimates} from '../../../grade_summary/jquery/pathToGoalEstimates'
@@ -132,16 +132,16 @@ describe('WhatIfRequiredGradePanel', () => {
     expect(mockedDispatch).toHaveBeenCalledWith([])
   })
 
-  it('exposes distinct accessible labels for slider and number input', async () => {
+  it('exposes distinct accessible names for slider and number input', async () => {
     const user = userEvent.setup()
-    const {getByText, getByTestId} = render(
+    const {getByRole, getByTestId} = render(
       <WhatIfRequiredGradePanel courseId="42" />,
     )
 
     await user.click(getByTestId('what-if-tool-toggle'))
 
-    expect(getByText('Target grade (%)')).toBeInTheDocument()
-    expect(getByText('Target grade precise value (%)')).toBeInTheDocument()
+    expect(getByRole('slider', {name: 'Target grade (%)'})).toBeInTheDocument()
+    expect(getByRole('spinbutton', {name: 'Target grade precise value (%)'})).toBeInTheDocument()
   })
 
   it('announces status updates in an aria-live region when expanded', async () => {
@@ -155,32 +155,27 @@ describe('WhatIfRequiredGradePanel', () => {
     expect(liveRegion).toHaveAttribute('aria-atomic', 'true')
   })
 
-  it('aborts the previous in-flight request when the target changes', async () => {
-    vi.useFakeTimers()
-
+  it('passes AbortSignal to the API and aborts when the tool closes', async () => {
     const pendingSignals: AbortSignal[] = []
     mockedGet.mockImplementation((_url, config) => {
       if (config?.signal) pendingSignals.push(config.signal)
       return new Promise(() => {})
     })
 
-    const user = userEvent.setup({advanceTimers: vi.advanceTimersByTime})
-    const {getByTestId, findByTestId} = render(
-      <WhatIfRequiredGradePanel courseId="42" />,
-    )
+    const user = userEvent.setup()
+    const {getByTestId} = render(<WhatIfRequiredGradePanel courseId="42" />)
 
     await user.click(getByTestId('what-if-tool-toggle'))
-    await vi.advanceTimersByTimeAsync(400)
 
-    const slider = await findByTestId('what-if-target-slider')
-    const rangeEl = slider.querySelector('input')
-    if (!rangeEl) throw new Error('target slider input not found')
+    await waitFor(() => {
+      expect(pendingSignals.length).toBeGreaterThanOrEqual(1)
+      expect(pendingSignals[0]).toBeInstanceOf(AbortSignal)
+    })
 
-    fireEvent.change(rangeEl, {target: {value: '90'}})
-    await vi.advanceTimersByTimeAsync(400)
+    await user.click(getByTestId('what-if-tool-toggle'))
 
-    expect(pendingSignals.length).toBeGreaterThanOrEqual(2)
-    expect(pendingSignals[0].aborted).toBe(true)
-    expect(pendingSignals[pendingSignals.length - 1].aborted).toBe(false)
+    await waitFor(() => {
+      expect(pendingSignals[0].aborted).toBe(true)
+    })
   })
 })

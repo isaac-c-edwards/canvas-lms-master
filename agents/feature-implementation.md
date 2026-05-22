@@ -27,7 +27,7 @@ code changes, tests, and PRs with board traceability.
 | EC2 / Docker runbook | `agents/aws-canvas-runbook.md` |
 | Memory / re-grounding | `agents/memory-practice.md` |
 | Implementation evidence log | `agents/tasks/feature-1/implementation-evidence.md` |
-| QA agent spec + lab evidence | `agents/quality-assurance.md`, `agents/tasks/feature-1/qa-lab-evidence.md` |
+| QA agent spec + evidence | `agents/quality-assurance.md`, `agents/tasks/feature-1/qa-lab-evidence.md` |
 
 **GitHub Project:**
 

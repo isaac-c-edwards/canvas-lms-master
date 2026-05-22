@@ -18,7 +18,7 @@ project item **Done**.
 2. Implementation agent opens a PR with `refs #N` and a test plan checklist (may include initial tests).
 3. **QA agent runs before the item is treated complete** — after the PR exists or the branch is ready for review, and **before** MCP marks the project item **Done** (which still requires merge per `feature-implementation.md`).
 4. Human reviews diff, approves merge; implementation agent merges and updates board + `implementation-evidence.md`.
-5. QA agent (or human) adds/updates `agents/tasks/feature-1/qa-lab-evidence.md` for lab traceability.
+5. QA agent (or human) adds/updates `agents/tasks/feature-1/qa-lab-evidence.md` for traceability.
 
 QA does not duplicate implementation: it does not rewrite feature logic except to fix tests or minimal hooks required for testability. If tests fail, QA and human fix tests or narrow scope until green, or document an honest blocker.
 
@@ -30,7 +30,7 @@ QA does not duplicate implementation: it does not rewrite feature logic except t
 | Branch | `feature/<issue#>-short-slug` (from PR or `git branch --show-current`) |
 | Feature scope | `agents/tasks/feature-1/implementation-research.md`, issue body |
 | Implementation trace | `agents/tasks/feature-1/implementation-evidence.md` |
-| QA trace (this lab) | `agents/tasks/feature-1/qa-lab-evidence.md` |
+| QA trace | `agents/tasks/feature-1/qa-lab-evidence.md` |
 | Diff under test | `git diff main...HEAD` or PR files tab |
 | Cursor QA skill | `.cursor/skills/qa/SKILL.md` (AAA, happy path + edge cases) |
 | Ruby test skill | `.claude/skills/rspec/SKILL.md` when editing `*_spec.rb` |
@@ -67,7 +67,7 @@ Run commands in an environment that matches the fork (prefer Docker per `AGENTS.
 6. **Run commands** — Execute table above for every new/changed test file and at least one related existing spec if integration risk exists.
 7. **Fix loop** — On failure: fix test or production code within slice scope; re-run until green or stop and document blocker.
 8. **Record evidence** — Append row/section to `agents/tasks/feature-1/qa-lab-evidence.md`: issue title, test paths, command, outcome, PR/commit link.
-9. **PR alignment (Lab 3.2)** — Ensure PR test plan checklist matches commands run; comment on PR if QA added tests after initial open.
+9. **PR alignment** — Ensure PR test plan checklist matches commands run; comment on PR if QA added tests after initial open.
 10. **Hand off** — Human merges; implementation agent marks board **Done** and updates `implementation-evidence.md`.
 
 Optional MCP: QA may comment on the issue with test commands and pass/fail summary; it does not call `projects_write` for **Done**.
@@ -92,12 +92,12 @@ Optional MCP: QA may comment on the issue with test commands and pass/fail summa
 
 **Not acceptable:** “Makes sense” to skip tests on calculator, API, or UI logic; “will add tests later” without an open follow-up issue.
 
-## MCP / PR alignment with Lab 3.2
+## MCP / PR alignment
 
 - Repo: `isaac-c-edwards/canvas-lms-master`, integration branch `main`
 - PR title: `[Feature 1] <description> (issue #N)`
 - PR body: summary, plan trace, `refs #N`, **test plan** listing exact commands QA ran
-- Board **Done** only after merge (implementation agent) — QA evidence must exist **before** you treat the slice as complete in the lab sense (tests green or justified skip)
+- Board **Done** only after merge (implementation agent) — QA evidence must exist before the slice is complete (tests green or justified skip)
 
 ## Guardrails
 
@@ -120,5 +120,5 @@ Optional MCP: QA may comment on the issue with test commands and pass/fail summa
 
 - `agents/feature-implementation.md` — implementation loop and board MCP
 - `.cursor/skills/qa/SKILL.md` — step-by-step test authoring behavior
-- `agents/tasks/feature-1/qa-lab-evidence.md` — per-item test trace for instructors
+- `agents/tasks/feature-1/qa-lab-evidence.md` — per-item test trace
 - `AGENTS.md` — Canvas build/test commands
