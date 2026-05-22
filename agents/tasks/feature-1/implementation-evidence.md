@@ -31,7 +31,7 @@ UI, and polish/tests are on `main`.
 | Issue | Title | Status |
 |-------|-------|--------|
 | #1 | Spike / brownfield investigation | Open on board — conclusions recorded in `implementation-research.md` §4 |
-| #7 | NFR performance + a11y spot-check | Open — Vitest a11y/abort cases added; see `qa-lab-evidence.md` §1 |
+| #7 | NFR performance + a11y spot-check | **Done** on board — PR #15 merged; EC2 Vitest sync pending AWS refresh |
 | #10 | Manual spreadsheet verification | Documented below for demo course; weighted-course scenario deferred |
 
 ---

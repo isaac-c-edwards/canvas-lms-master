@@ -15,7 +15,7 @@ Traceability log: work item → tests → command → pass (or documented skip).
 
 | Issue | Title | Tests | Command | Outcome | PR / commit |
 |-------|-------|-------|---------|---------|-------------|
-| [#7](https://github.com/isaac-c-edwards/canvas-lms-master/issues/7) | NFR performance + a11y spot-check | +3 Vitest cases in panel spec | `docker compose run --rm web yarn test ui/features/what_if_required_grade/react/__tests__/WhatIfRequiredGradePanel.test.tsx` | **Pending** EC2 run — see §1 | [PR #15](https://github.com/isaac-c-edwards/canvas-lms-master/pull/15) |
+| [#7](https://github.com/isaac-c-edwards/canvas-lms-master/issues/7) | NFR performance + a11y spot-check | +3 Vitest cases in panel spec | `docker compose run --rm web yarn test ui/features/what_if_required_grade/react/__tests__/WhatIfRequiredGradePanel.test.tsx` | **Pending** EC2 sync (AWS creds expired) — see §1 | [PR #15](https://github.com/isaac-c-edwards/canvas-lms-master/pull/15) merged |
 | [#9](https://github.com/isaac-c-edwards/canvas-lms-master/issues/9) | Vitest for React panel | `WhatIfRequiredGradePanel.test.tsx` (toggle, fetch, clear) | `yarn test ui/features/what_if_required_grade/react/__tests__/WhatIfRequiredGradePanel.test.tsx` | **Pass** (4/4) — 2026-05-19 — see §3 | [PR #14](https://github.com/isaac-c-edwards/canvas-lms-master/pull/14) |
 | [#10](https://github.com/isaac-c-edwards/canvas-lms-master/issues/10) | Manual spreadsheet verification | None (manual) | EC2 student grades + spreadsheet | **Skip** (justified) — see §2 | [PR #14](https://github.com/isaac-c-edwards/canvas-lms-master/pull/14) |
 
@@ -52,13 +52,12 @@ docker compose run --rm web yarn test \
 
 | Run | Environment | Result |
 |-----|-------------|--------|
-| 2026-05-21 | EC2 (partial) | 5/7 pass after first push; follow-up test fixes pending push |
-| 2026-05-21 | Windows dev machine | Not executed — Canvas tests require Docker web container per `AGENTS.md` |
+| 2026-05-22 | EC2 sync | **Blocked** — AWS session token expired; run `git pull origin main` + Vitest after refreshing Learner Lab creds |
+| 2026-05-21 | EC2 (pre-fix) | 5/7 — fixed in `ed5170d2`, merged via PR #15 |
 
-**Before merge:** Re-run the command above on EC2 after `git pull`; expect **7** examples.
-Update this table with date and pass/fail.
+**Merge:** https://github.com/isaac-c-edwards/canvas-lms-master/pull/15 → [aae36cc6](https://github.com/isaac-c-edwards/canvas-lms-master/commit/aae36cc67a831a175b361fd7b8cc4384e9bd5847)
 
-**PR:** https://github.com/isaac-c-edwards/canvas-lms-master/pull/15
+**Board:** Issue #7 → **Done** (project item `185630688`, 2026-05-22)
 
 ---
 
