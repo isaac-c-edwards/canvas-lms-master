@@ -27,6 +27,7 @@ code changes, tests, and PRs with board traceability.
 | EC2 / Docker runbook | `agents/aws-canvas-runbook.md` |
 | Memory / re-grounding | `agents/memory-practice.md` |
 | Implementation evidence log | `agents/tasks/feature-1/implementation-evidence.md` |
+| QA agent spec + evidence | `agents/quality-assurance.md`, `agents/tasks/feature-1/qa-lab-evidence.md` |
 
 **GitHub Project:**
 
@@ -81,8 +82,11 @@ status in `implementation-evidence.md`.
 3. **Branch** — `feature/<issue#>-short-slug` from `main`.
 4. **Implement** — Agent writes code/tests; human reviews diff.
 5. **Verify** — Run checks for the slice type (see table below).
-6. **Commit / push** — Conventional Canvas commit message; push branch.
-7. **Open PR** — Link issue in body (`refs #N`); describe plan trace.
+6. **QA handoff** — For behavior-changing slices, run the QA agent per
+   `agents/quality-assurance.md`; record pass or justified skip in
+   `agents/tasks/feature-1/qa-lab-evidence.md` before treating the item complete.
+7. **Commit / push** — Conventional Canvas commit message; push branch.
+8. **Open PR** — Link issue in body (`refs #N`); describe plan trace; list test commands QA ran.
 
 **Branch naming:** `feature/<issue#>-short-slug` (examples: `feature/2-what-if-calculator-engine`, `feature/14-path-to-goal-polish`)
 

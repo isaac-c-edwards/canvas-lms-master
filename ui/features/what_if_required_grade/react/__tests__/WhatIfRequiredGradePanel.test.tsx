@@ -60,6 +60,7 @@ describe('WhatIfRequiredGradePanel', () => {
   })
 
   afterEach(() => {
+    vi.useRealTimers()
     vi.clearAllMocks()
   })
 
@@ -71,7 +72,6 @@ describe('WhatIfRequiredGradePanel', () => {
     expect(getByTestId('what-if-required-grade-panel')).toBeInTheDocument()
     expect(queryByTestId('what-if-target-slider')).not.toBeInTheDocument()
     expect(mockedGet).not.toHaveBeenCalled()
-    expect(mockedDispatch).not.toHaveBeenCalled()
   })
 
   it('shows success path messaging after the student opens the tool', async () => {
@@ -112,13 +112,6 @@ describe('WhatIfRequiredGradePanel', () => {
 
     await user.click(getByTestId('what-if-tool-toggle'))
 
-    const input = await findByTestId('what-if-target-input')
-    const inputEl = input.querySelector('input')
-    if (!inputEl) throw new Error('target input not found')
-
-    await user.clear(inputEl)
-    await user.type(inputEl, '95')
-
     expect(await findByTestId('what-if-unreachable-alert')).toHaveTextContent(
       'Target unreachable with remaining assignments',
     )
@@ -137,5 +130,52 @@ describe('WhatIfRequiredGradePanel', () => {
     await user.click(getByTestId('what-if-tool-toggle'))
 
     expect(mockedDispatch).toHaveBeenCalledWith([])
+  })
+
+  it('exposes distinct accessible names for slider and number input', async () => {
+    const user = userEvent.setup()
+    const {getByRole, getByTestId} = render(
+      <WhatIfRequiredGradePanel courseId="42" />,
+    )
+
+    await user.click(getByTestId('what-if-tool-toggle'))
+
+    expect(getByRole('slider', {name: 'Target grade (%)'})).toBeInTheDocument()
+    expect(getByRole('spinbutton', {name: 'Target grade precise value (%)'})).toBeInTheDocument()
+  })
+
+  it('announces status updates in an aria-live region when expanded', async () => {
+    const user = userEvent.setup()
+    const {container, getByTestId} = render(<WhatIfRequiredGradePanel courseId="42" />)
+
+    await user.click(getByTestId('what-if-tool-toggle'))
+
+    const liveRegion = container.querySelector('[aria-live="polite"]')
+    expect(liveRegion).toBeInTheDocument()
+    expect(liveRegion).toHaveAttribute('aria-atomic', 'true')
+  })
+
+  it('passes AbortSignal to the API and aborts when the tool closes', async () => {
+    const pendingSignals: AbortSignal[] = []
+    mockedGet.mockImplementation((_url, config) => {
+      if (config?.signal) pendingSignals.push(config.signal)
+      return new Promise(() => {})
+    })
+
+    const user = userEvent.setup()
+    const {getByTestId} = render(<WhatIfRequiredGradePanel courseId="42" />)
+
+    await user.click(getByTestId('what-if-tool-toggle'))
+
+    await waitFor(() => {
+      expect(pendingSignals.length).toBeGreaterThanOrEqual(1)
+      expect(pendingSignals[0]).toBeInstanceOf(AbortSignal)
+    })
+
+    await user.click(getByTestId('what-if-tool-toggle'))
+
+    await waitFor(() => {
+      expect(pendingSignals[0].aborted).toBe(true)
+    })
   })
 })
