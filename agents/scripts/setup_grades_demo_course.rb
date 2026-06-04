@@ -53,18 +53,18 @@ end
 course.update!(hide_final_grades: false)
 
 # [title, points_possible, score or nil for ungraded]
-# Graded scores target ~80.00% on completed work (380 / 475 pts).
+# Graded scores ≈ 80.42% on completed work (382 / 475 pts) — varied item scores.
 ASSIGNMENTS = [
-  ["Reading Quiz 1", 25, 20],
-  ["Reading Quiz 2", 25, 20],
-  ["Homework 1", 50, 40],
-  ["Homework 2", 50, 40],
-  ["Lab Report", 75, 60],
+  ["Reading Quiz 1", 25, 19],
+  ["Reading Quiz 2", 25, 21],
+  ["Homework 1", 50, 41],
+  ["Homework 2", 50, 39],
+  ["Lab Report", 75, 61],
   ["Midterm Exam", 150, 120],
-  ["Group Project", 100, 80],
+  ["Group Project", 100, 81],
   ["Presentation", 50, nil],
   ["Final Paper", 100, nil],
-  ["Final Exam", 175, nil],
+  ["Final Exam", 250, nil],
 ].freeze
 
 ASSIGNMENTS.each do |title, points_possible, score|
@@ -77,6 +77,10 @@ ASSIGNMENTS.each do |title, points_possible, score|
       workflow_state: "published"
     )
     puts "  + #{title} (#{points_possible} pts)"
+  elsif assignment.points_possible != points_possible
+    assignment.points_possible = points_possible
+    assignment.save!
+    puts "  ~ #{title} points → #{points_possible}"
   end
 
   next unless student && score
@@ -101,6 +105,7 @@ puts "COURSE_NAME=#{COURSE_NAME}"
 puts "COURSE_ID=#{course.id}"
 puts "GRADES_URL=/courses/#{course.id}/grades"
 puts "STUDENT_EMAIL=#{STUDENT_EMAIL}"
-puts "GRADED=#{earned_pts}/#{graded_pts} pts (#{ASSIGNMENTS.count { |_, _, s| s }} assignments)"
+pct = graded_pts.positive? ? (100.0 * earned_pts / graded_pts).round(2) : 0
+puts "GRADED=#{earned_pts}/#{graded_pts} pts (#{pct}%, #{ASSIGNMENTS.count { |_, _, s| s }} assignments)"
 puts "REMAINING_UNGRADED=#{remaining_pts} pts (#{ASSIGNMENTS.count { |_, _, s| s.nil? }} assignments)"
 puts "TOTAL_POINTS=#{total_pts}"
