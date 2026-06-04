@@ -35,8 +35,7 @@ course = account.courses.active.find_by(name: COURSE_NAME)
 unless course
   course = account.courses.create!(
     name: COURSE_NAME,
-    course_code: "WIF-LAB",
-    workflow_state: "available"
+    course_code: "WIF-LAB"
   )
   course.enroll_user(teacher, "TeacherEnrollment", enrollment_state: "active")
   course.offer!
