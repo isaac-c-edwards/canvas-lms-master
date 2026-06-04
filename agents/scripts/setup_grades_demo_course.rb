@@ -53,14 +53,15 @@ end
 course.update!(hide_final_grades: false)
 
 # [title, points_possible, score or nil for ungraded]
+# Graded scores target ~80.00% on completed work (380 / 475 pts).
 ASSIGNMENTS = [
-  ["Reading Quiz 1", 25, 23],
-  ["Reading Quiz 2", 25, 22],
-  ["Homework 1", 50, 47],
-  ["Homework 2", 50, 44],
-  ["Lab Report", 75, 68],
-  ["Midterm Exam", 150, 132],
-  ["Group Project", 100, 91],
+  ["Reading Quiz 1", 25, 20],
+  ["Reading Quiz 2", 25, 20],
+  ["Homework 1", 50, 40],
+  ["Homework 2", 50, 40],
+  ["Lab Report", 75, 60],
+  ["Midterm Exam", 150, 120],
+  ["Group Project", 100, 80],
   ["Presentation", 50, nil],
   ["Final Paper", 100, nil],
   ["Final Exam", 175, nil],
@@ -81,7 +82,10 @@ ASSIGNMENTS.each do |title, points_possible, score|
   next unless student && score
 
   submission = assignment.submissions.find_by(user: student)
-  next if submission&.score == score
+  if submission&.score == score
+    puts "  ok #{title}: #{score}/#{points_possible}"
+    next
+  end
 
   assignment.grade_student(student, grade: score, grader: teacher)
   puts "  graded #{title}: #{score}/#{points_possible}"
