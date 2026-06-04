@@ -69,7 +69,7 @@ ASSIGNMENTS = [
 
 ASSIGNMENTS.each do |title, points_possible, score|
   assignment = course.assignments.active.find_by(title: title)
-  unless assignment
+  if assignment.nil?
     assignment = course.assignments.create!(
       title: title,
       points_possible: points_possible,
@@ -78,9 +78,8 @@ ASSIGNMENTS.each do |title, points_possible, score|
     )
     puts "  + #{title} (#{points_possible} pts)"
   elsif assignment.points_possible != points_possible
-    assignment.points_possible = points_possible
-    assignment.save!
-    puts "  ~ #{title} points → #{points_possible}"
+    assignment.update!(points_possible: points_possible)
+    puts "  ~ #{title} points -> #{points_possible}"
   end
 
   next unless student && score
